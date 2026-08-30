@@ -10,7 +10,7 @@
 
 The Gold Mountain Wellness Resort website development is underway to create a calm, editorial-style digital presence positioning the resort as a sanctuary for nature, healing, healthy dining, and traditional wellness in Tiruvannamalai, Tamil Nadu (near Arunachala Hill).
 
-Phases 1, 2, and 3 have been **100% completed and verified** with clean production builds (`npm run build` exit code 0).
+Phases 1, 2, 3, and 4 have been **100% completed and verified** with clean production builds (`npm run build` exit code 0).
 
 ---
 
@@ -69,39 +69,52 @@ Developed all **21 reusable global components** as specified in the brand guidel
 All components are exported through `src/components/index.ts`.
 
 ### Phase 3: Core Storytelling Pages `[COMPLETED]`
+- **Home Page (`src/app/page.tsx`):** 10 storytelling sections (Hero, Wellness, Resort, Stay, Experience, Location, Dining, Trust, Blog, Final CTA + Enquiry).
+- **Wellness Page (`src/app/wellness/page.tsx`):** 7 sections (Hero, Philosophy, 7-Pillars Grid, Ayurveda, 6 Healing Dimensions, Curated Packages with `[PRICE TO BE PROVIDED]`, Final CTA + Enquiry).
 
-#### 1. Home Page (`src/app/page.tsx`) — 10 Complete Sections:
-- **Hero Section:** Immersive background image with *"A Wellness Stay in the Presence of Arunachala"*, primary & secondary CTAs.
-- **Wellness Section:** *"Wellness, in its own time"* introducing Ayurvedic practices, mindful dining, yoga & nature reconnection.
-- **Resort / Place Section:** Editorial split layout highlighting resort architecture, gardens, and quiet courtyards.
-- **Stay Preview Section:** Accommodations cards featuring Deluxe Garden Room & Mountain View Suite with amenities badges.
-- **Experience Section:** *"More than a stay"* featuring Shiva Shakthi Darshanam, Farm & Herbal Garden, and Quiet Sanctuary Pond.
-- **Location Block:** *"In the presence of Arunachala"* with Tiruvannamalai geographical details and Google Maps integration.
-- **Dining Section:** *"Food that nourishes"* emphasizing fresh vegetarian, farm-to-table cuisine.
-- **Trust Section:** Authentic guest reflections and experience feedback.
-- **Blog Section:** Featured editorial articles (*Rhythm of Arunachala*, *Mindful Dining*, *Guide to Rest*).
-- **Final CTA & Footer Integration:** *"Your time at Gold Mountain begins here"* with full interactive `EnquiryForm` and minimal luxury footer.
+### Phase 4: Secondary Content Pages `[COMPLETED]`
 
-#### 2. Wellness Page (`src/app/wellness/page.tsx`) — 7 Complete Sections:
-- **Breadcrumb Navigation:** `Home / Wellness` tracking.
-- **Hero Section:** *"A slower way back to yourself"* with primary package CTA.
-- **Philosophy Section:** Nature + traditional wellness practices (no medical claims).
-- **Wellness Approach Grid:** 7 pillars (Ayurveda, Traditional Therapies, Yoga, Meditation, Healthy Food, Nature & Air, Lifestyle & Rest).
-- **Ayurveda Heritage:** *"Traditional wisdom, thoughtfully experienced"* written in simple international English.
-- **Six Dimensions of Healing:** Interactive grid covering Body, Mind, Food, Movement, Nature, and Rest.
-- **Curated Packages Section:** Rejuvenation & Rest (3N/4D) and Traditional Ayurveda Stay (7N/8D) with `[PRICE TO BE PROVIDED]` placeholders & direct WhatsApp enquiry.
-- **Final CTA & Booking Form:** Direct WhatsApp & Email enquiry form integration.
+#### 1. Stay Page (`src/app/stay/page.tsx`):
+- Hero: *"A peaceful place to stay"*
+- Confirmed Room Categories: Deluxe Garden Room & Mountain View Suite with amenities badges & capacity info. No fake prices.
+- Dedicated Extended Stay Section: *"Stay a little longer"* with WhatsApp monthly stay CTA.
+- Confirmed Amenities Grid: Room Service, Dining Area, Free Parking, Air Conditioning, High-speed Wi-Fi, CCTV, 24-Hour Desk.
+- Integrated `EnquiryForm` & Footer.
+
+#### 2. Experience Page (`src/app/experience/page.tsx`):
+- Hero: *"Experience the place beyond the stay"*
+- Experience 01: Shiva Shakthi Darshanam (Sacred Mountain Vistas)
+- Experience 02 & 03: Cow Shelter (Goshala) & Natural Lily Fish Pond
+- Experience 04: Five Element Philosophy (Pancha Bhoota - Earth, Water, Fire, Air, Space)
+- Experience 05: From Our Land (Farm-grown vegetables & herbal gardens)
+- Integrated `EnquiryForm` & Footer.
+
+#### 3. About Page (`src/app/about/page.tsx`):
+- Hero: *"A place created with purpose"*
+- Resort Story: Authentic story of Gold Mountain as a sanctuary.
+- Founder Profile: Vision & leadership section with `[FOUNDER PROFILE TO BE PROVIDED]` fallback.
+- 6 Core Philosophy Pillars: Nature, Wellness, Food, Traditional Knowledge, Hospitality, Arunachala.
+- Integrated `EnquiryForm` & Footer.
+
+#### 4. Journal / Blog System (`src/app/blog/page.tsx` & `src/app/blog/[slug]/page.tsx`):
+- Blog Index: *"Stories from Gold Mountain"* with category filter pills (Wellness, Ayurveda, Food, Nature, Arunachala, Life at Gold Mountain).
+- Dynamic Article Pages: Next.js dynamic routing with full article layout, hero images, related stories, and direct WhatsApp enquiry CTAs.
 
 ---
 
 ## 4. Verification & Build Results
 
 - **Next.js Production Build (`npm run build`):**
-  - Compiled successfully (`✓ Compiled successfully in 2.9s`).
-  - Static Page Generation: `✓ Generating static pages (5/5)`.
-  - Routes Generated:
+  - Compiled successfully (`✓ Compiled successfully in 2.2s`).
+  - Static Page Generation: `✓ Generating static pages (9/9)`.
+  - Routes Generated & Verified:
     - `/` (Home Page)
     - `/_not-found`
+    - `/about` (About Page)
+    - `/blog` (Blog Index Page)
+    - `/blog/[slug]` (Dynamic Journal Article Page)
+    - `/experience` (Experience Page)
+    - `/stay` (Stay Page)
     - `/wellness` (Wellness Page)
   - Type checking & ESLint: `0 errors`.
 
@@ -109,6 +122,5 @@ All components are exported through `src/components/index.ts`.
 
 ## 5. Upcoming Roadmap
 
-- **Phase 4:** Secondary Content Pages (Stay, Experience, About, Blog Pages)
-- **Phase 5:** Conversion & Contact Pages (Contact Page, Enquiry Page)
+- **Phase 5:** Conversion & Contact Pages (Contact Page, Dedicated Enquiry Page)
 - **Phase 6:** Polish, Accessibility & Performance Audit
