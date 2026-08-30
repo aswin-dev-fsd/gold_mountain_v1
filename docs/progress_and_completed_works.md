@@ -8,7 +8,7 @@
 
 ## 1. Executive Summary
 
-The Gold Mountain Wellness Resort website development is complete. All **6 implementation phases** outlined in the project plan have been **100% built, verified, documented, and pushed to GitHub** with clean production builds (`npm run build` exit code 0).
+The Gold Mountain Wellness Resort website development is complete. All **6 implementation phases** plus legal pages have been **100% built, verified, documented, and pushed to GitHub** with clean production builds (`npm run build` exit code 0).
 
 ---
 
@@ -54,10 +54,11 @@ Developed all **21 reusable global components**:
 - **Contact Page (`src/app/contact/page.tsx`):** Direct WhatsApp, Email, Phone, Interactive Form with dropdowns, Verified Physical Address, Google Maps link.
 - **Enquire Page (`src/app/enquire/page.tsx`):** Detailed reservation enquiry form (Arrival/Departure dates, guests, interest type).
 
-### Phase 6: Polish, Accessibility & Performance `[COMPLETED]`
+### Phase 6: Polish, Accessibility & Legal Pages `[COMPLETED]`
 - **Heading & Semantic Hierarchy:** Single `<h1>` tag per page, semantic HTML structure across all routes.
 - **Accessibility (a11y):** Full keyboard navigation, `aria-label` attributes on interactive toggles and icons, contrast ratio > 15:1.
 - **SEO Automation:** Automated `src/app/sitemap.ts` dynamic sitemap generator and `src/app/robots.ts` robots configuration.
+- **Legal Pages:** Built `src/app/privacy/page.tsx` (Privacy Policy) and `src/app/terms/page.tsx` (Terms & Conditions).
 - **Performance Optimization:** Next.js Image component lazy-loading and static prerendering for instant page loads.
 
 ---
@@ -66,8 +67,8 @@ Developed all **21 reusable global components**:
 
 - **Next.js Production Build (`npm run build`):**
   - Compiled successfully (`✓ Compiled successfully in 2.2s`).
-  - Static Page Generation: `✓ Generating static pages (13/13)`.
-  - **All 13 Production Routes Generated & Prerendered:**
+  - Static Page Generation: `✓ Generating static pages (15/15)`.
+  - **All 15 Production Routes Generated & Prerendered:**
     - `/` (Home Page)
     - `/_not-found`
     - `/about` (About Page)
@@ -76,8 +77,10 @@ Developed all **21 reusable global components**:
     - `/contact` (Contact Page)
     - `/enquire` (Dedicated Booking / Enquiry Page)
     - `/experience` (Experience Page)
+    - `/privacy` (Privacy Policy)
     - `/robots.txt` (SEO Robots File)
     - `/sitemap.xml` (SEO Sitemap XML)
     - `/stay` (Stay Page)
+    - `/terms` (Terms & Conditions)
     - `/wellness` (Wellness Page)
   - Type checking & ESLint: `0 errors`.
