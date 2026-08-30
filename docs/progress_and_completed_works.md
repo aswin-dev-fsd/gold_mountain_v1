@@ -10,7 +10,7 @@
 
 The Gold Mountain Wellness Resort website development is underway to create a calm, editorial-style digital presence positioning the resort as a sanctuary for nature, healing, healthy dining, and traditional wellness in Tiruvannamalai, Tamil Nadu (near Arunachala Hill).
 
-Phases 1, 2, 3, and 4 have been **100% completed and verified** with clean production builds (`npm run build` exit code 0).
+Phases 1, 2, 3, 4, and 5 have been **100% completed and verified** with clean production builds (`npm run build` exit code 0).
 
 ---
 
@@ -73,46 +73,41 @@ All components are exported through `src/components/index.ts`.
 - **Wellness Page (`src/app/wellness/page.tsx`):** 7 sections (Hero, Philosophy, 7-Pillars Grid, Ayurveda, 6 Healing Dimensions, Curated Packages with `[PRICE TO BE PROVIDED]`, Final CTA + Enquiry).
 
 ### Phase 4: Secondary Content Pages `[COMPLETED]`
+- **Stay Page (`src/app/stay/page.tsx`):** Deluxe Garden Room & Mountain View Suite, Monthly Stays, Confirmed Amenities.
+- **Experience Page (`src/app/experience/page.tsx`):** Shiva Shakthi Darshanam, Cow Shelter, Lily Fish Pond, Five Elements, Farm & Herbal Garden.
+- **About Page (`src/app/about/page.tsx`):** Story, Founder Profile (`[FOUNDER PROFILE TO BE PROVIDED]`), 6 Values.
+- **Journal / Blog System (`src/app/blog/page.tsx` & `/blog/[slug]/page.tsx`):** Category filter pills, dynamic article layouts.
 
-#### 1. Stay Page (`src/app/stay/page.tsx`):
-- Hero: *"A peaceful place to stay"*
-- Confirmed Room Categories: Deluxe Garden Room & Mountain View Suite with amenities badges & capacity info. No fake prices.
-- Dedicated Extended Stay Section: *"Stay a little longer"* with WhatsApp monthly stay CTA.
-- Confirmed Amenities Grid: Room Service, Dining Area, Free Parking, Air Conditioning, High-speed Wi-Fi, CCTV, 24-Hour Desk.
-- Integrated `EnquiryForm` & Footer.
+### Phase 5: Conversion & Contact Pages `[COMPLETED]`
 
-#### 2. Experience Page (`src/app/experience/page.tsx`):
-- Hero: *"Experience the place beyond the stay"*
-- Experience 01: Shiva Shakthi Darshanam (Sacred Mountain Vistas)
-- Experience 02 & 03: Cow Shelter (Goshala) & Natural Lily Fish Pond
-- Experience 04: Five Element Philosophy (Pancha Bhoota - Earth, Water, Fire, Air, Space)
-- Experience 05: From Our Land (Farm-grown vegetables & herbal gardens)
-- Integrated `EnquiryForm` & Footer.
+#### 1. Contact Page (`src/app/contact/page.tsx`):
+- Hero: *"Let's plan your stay"*
+- Direct Channels: Instant WhatsApp CTA, Dedicated Email, Reception Phone.
+- Interactive Form: Name, Email, WhatsApp/Phone, Preferred Dates, Guests, Enquiry Type (Stay, Wellness, Ayurveda, Monthly Stay, General Enquiry), Message. After submit: Clean receipt message (no fake booking confirmation!).
+- Verified Physical Address: No.97, Kottangal Road, Adiannamalai, Tiruvannamalai, Tamil Nadu 606604, India + Google Maps button.
+- International Guest transfer guidance (Chennai MAA airport transfers).
 
-#### 3. About Page (`src/app/about/page.tsx`):
-- Hero: *"A place created with purpose"*
-- Resort Story: Authentic story of Gold Mountain as a sanctuary.
-- Founder Profile: Vision & leadership section with `[FOUNDER PROFILE TO BE PROVIDED]` fallback.
-- 6 Core Philosophy Pillars: Nature, Wellness, Food, Traditional Knowledge, Hospitality, Arunachala.
-- Integrated `EnquiryForm` & Footer.
-
-#### 4. Journal / Blog System (`src/app/blog/page.tsx` & `src/app/blog/[slug]/page.tsx`):
-- Blog Index: *"Stories from Gold Mountain"* with category filter pills (Wellness, Ayurveda, Food, Nature, Arunachala, Life at Gold Mountain).
-- Dynamic Article Pages: Next.js dynamic routing with full article layout, hero images, related stories, and direct WhatsApp enquiry CTAs.
+#### 2. Dedicated Book / Enquiry Page (`src/app/enquire/page.tsx`):
+- Hero: *"Your stay begins with a conversation"*
+- Detailed Reservation Form: Name, Email, Phone, Arrival Date, Departure Date, Guests, Interested In (Resort Stay, Wellness Package, Ayurveda Therapy, Monthly Extended Stay, Other Query), Message.
+- Direct Contact Channels: Instant WhatsApp Chat, Email, Direct Desk Call.
+- Strictly NO fake inventory, fake calendar, or payment gateway — pure enquiry-first workflow.
 
 ---
 
 ## 4. Verification & Build Results
 
 - **Next.js Production Build (`npm run build`):**
-  - Compiled successfully (`✓ Compiled successfully in 2.2s`).
-  - Static Page Generation: `✓ Generating static pages (9/9)`.
+  - Compiled successfully (`✓ Compiled successfully in 2.5s`).
+  - Static Page Generation: `✓ Generating static pages (11/11)`.
   - Routes Generated & Verified:
     - `/` (Home Page)
     - `/_not-found`
     - `/about` (About Page)
     - `/blog` (Blog Index Page)
     - `/blog/[slug]` (Dynamic Journal Article Page)
+    - `/contact` (Contact Page)
+    - `/enquire` (Dedicated Booking / Enquiry Page)
     - `/experience` (Experience Page)
     - `/stay` (Stay Page)
     - `/wellness` (Wellness Page)
@@ -122,5 +117,4 @@ All components are exported through `src/components/index.ts`.
 
 ## 5. Upcoming Roadmap
 
-- **Phase 5:** Conversion & Contact Pages (Contact Page, Dedicated Enquiry Page)
 - **Phase 6:** Polish, Accessibility & Performance Audit
