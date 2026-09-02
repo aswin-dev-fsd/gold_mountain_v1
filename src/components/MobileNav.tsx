@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 
 interface MobileNavProps {
@@ -10,6 +10,17 @@ interface MobileNavProps {
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, navLinks }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -24,7 +35,6 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, navLinks 
         flexDirection: 'column',
         padding: '2rem 1.5rem',
       }}
-      className="reveal-fade"
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
         <span className="editorial-serif" style={{ fontSize: '1.5rem', color: 'var(--accent-gold)' }}>

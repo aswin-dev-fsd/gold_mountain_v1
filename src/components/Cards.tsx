@@ -106,24 +106,52 @@ export const WellnessOfferingCard: React.FC<WellnessOfferingProps> = ({
   return (
     <div
       style={{
-        backgroundColor: 'var(--bg-primary)',
-        border: '1px solid var(--border-subtle)',
-        padding: '1.75rem',
-        borderRadius: '2px',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid rgba(0, 0, 0, 0.08)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
+        padding: '2rem',
+        borderRadius: '4px',
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        transition: 'var(--transition-smooth)',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease',
       }}
     >
-      {icon && <div style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>{icon}</div>}
-      <span className="eyebrow" style={{ marginBottom: '0.25rem' }}>
-        {category}
-      </span>
-      <h3 className="editorial-serif" style={{ fontSize: '1.35rem', marginBottom: '0.75rem' }}>
-        {title}
-      </h3>
-      <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-small)', lineHeight: '1.6' }}>{description}</p>
+      {/* Decorative Overlapping Circle */}
+      <div 
+        style={{
+          position: 'absolute',
+          bottom: '-40px',
+          right: '-40px',
+          width: '160px',
+          height: '160px',
+          borderRadius: '50%',
+          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          zIndex: 0,
+        }}
+      />
+      
+      {/* Content wrapper to stay above the decorative circle */}
+      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+        {icon && <div style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>{icon}</div>}
+        <span 
+          className="eyebrow" 
+          style={{ 
+            marginBottom: '0.75rem',
+            color: 'var(--text-primary)'
+          }}
+        >
+          {category}
+        </span>
+        <h3 className="editorial-serif" style={{ fontSize: '1.45rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
+          {title}
+        </h3>
+        <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-small)', lineHeight: '1.7' }}>
+          {description}
+        </p>
+      </div>
     </div>
   );
 };

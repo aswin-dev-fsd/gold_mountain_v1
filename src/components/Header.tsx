@@ -48,12 +48,12 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
         left: 0,
         right: 0,
         backgroundColor: isScrolled ? 'rgba(251, 249, 245, 0.95)' : 'transparent',
-        backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-        WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
+        backdropFilter: isScrolled && !isMobileNavOpen ? 'blur(10px)' : 'none',
+        WebkitBackdropFilter: isScrolled && !isMobileNavOpen ? 'blur(10px)' : 'none',
         borderBottom: isScrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
         boxShadow: isScrolled ? '0 4px 20px rgba(0, 0, 0, 0.05)' : 'none',
         zIndex: 900,
-        height: isScrolled ? '4.25rem' : '5.5rem',
+        height: '4.25rem',
         display: 'flex',
         alignItems: 'center',
         transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -61,37 +61,28 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Brand Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Image
-            src="/images/logo white and black.png"
-            alt="Gold Mountain Wellness Resort"
-            width={isScrolled ? 42 : 48}
-            height={isScrolled ? 42 : 48}
-            style={{ objectFit: 'contain', transition: 'all 0.35s ease' }}
-            priority
-          />
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span
               className="editorial-serif"
               style={{
-                fontSize: isScrolled ? '1.15rem' : '1.3rem',
+                fontSize: '1.5rem',
                 fontWeight: 700,
                 color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.1,
-                transition: 'color 0.35s ease, font-size 0.35s ease',
+                transition: 'color 0.35s ease',
               }}
             >
               Gold Mountain
             </span>
             <span
               style={{
-                fontSize: isScrolled ? '0.55rem' : '0.65rem',
+                fontSize: '0.65rem',
                 textTransform: 'uppercase',
-                letterSpacing: '0.15em',
+                letterSpacing: '0.2em',
                 color: 'var(--accent-gold)',
                 fontWeight: 700,
-                transition: 'font-size 0.35s ease',
               }}
             >
               Wellness Resort
@@ -132,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
             href="#enquire"
             className="btn"
             style={{
-              padding: isScrolled ? '0.5rem 1.15rem' : '0.6rem 1.35rem',
+              padding: '0.5rem 1.15rem',
               fontSize: '0.75rem',
               backgroundColor: isScrolled ? 'transparent' : 'rgba(251, 249, 245, 0.15)',
               color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
