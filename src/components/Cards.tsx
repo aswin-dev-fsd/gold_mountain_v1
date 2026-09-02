@@ -174,6 +174,7 @@ export const ExperienceBlock: React.FC<ExperienceBlockProps> = ({
 }) => {
   return (
     <div
+      className="experience-card"
       style={{
         position: 'relative',
         borderRadius: '2px',
@@ -183,7 +184,7 @@ export const ExperienceBlock: React.FC<ExperienceBlockProps> = ({
         alignItems: 'flex-end',
       }}
     >
-      <Image src={imageSrc} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+      <Image src={imageSrc} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} className="experience-img" />
       <div
         style={{
           position: 'absolute',
@@ -288,14 +289,11 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ quote, author, ori
         backgroundColor: 'var(--bg-surface)',
         padding: '2rem',
         borderRadius: '2px',
-        borderLeft: '3px solid var(--accent-gold)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         height: '100%',
-        flex: '0 0 auto',
-        width: 'min(450px, 85vw)',
-        scrollSnapAlign: 'start',
+        width: '100%',
       }}
     >
       <p

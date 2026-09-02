@@ -250,19 +250,56 @@ export default function HomePage() {
       {/* --------------------------------------------------------------------------
          SECTION 07 — DINING
          -------------------------------------------------------------------------- */}
-      <EditorialSection
-        eyebrow="Mindful Dining"
-        title="Food that nourishes."
-        content={
-          <p>
-            Dining at Gold Mountain is an extension of our wellness ethos. We emphasize freshly cooked, wholesome meals prepared with seasonal local produce, gentle spices, and traditional recipes designed to support digestion and vitality.
-          </p>
-        }
-        imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
-        imageAlt="Fresh healthy wellness cuisine"
-        imagePosition="right"
-        cta={<PrimaryButton href="/wellness">Discover Dining Philosophy</PrimaryButton>}
-      />
+      <section
+        className="section"
+        style={{
+          position: 'relative',
+          backgroundImage: 'url(/images/food_background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          padding: 'var(--space-2xl) 0',
+          overflow: 'hidden',
+        }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div
+            style={{
+              maxWidth: '680px',
+              margin: '0 auto',
+              textAlign: 'center',
+              padding: 'var(--space-md)',
+            }}
+          >
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Mindful Dining
+            </span>
+            <h2
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-h2)',
+                color: 'var(--text-primary)',
+                marginBottom: 'var(--space-md)',
+                lineHeight: '1.2',
+              }}
+            >
+              Food that nourishes.
+            </h2>
+            <p
+              style={{
+                color: 'var(--text-muted)',
+                fontSize: 'var(--fs-body)',
+                lineHeight: '1.7',
+                marginBottom: 'var(--space-md)',
+              }}
+            >
+              Dining at Gold Mountain is an extension of our wellness ethos. We emphasize freshly cooked, wholesome meals prepared with seasonal local produce, gentle spices, and traditional recipes designed to support digestion and vitality.
+            </p>
+            <div>
+              <PrimaryButton href="/wellness">Discover Dining Philosophy</PrimaryButton>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* --------------------------------------------------------------------------
          SECTION 08 — TRUST / TESTIMONIALS (Pinned Horizontal Scroll)

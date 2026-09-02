@@ -18,32 +18,44 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
   const trackRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [maxTranslate, setMaxTranslate] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(3);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 768) {
+        setIsMobile(true);
+        setCardsPerView(1);
+      } else if (width <= 1024) {
+        setIsMobile(false);
+        setCardsPerView(2);
+      } else {
+        setIsMobile(false);
+        setCardsPerView(3);
+      }
     };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
     if (isMobile) return;
 
     const updateDimensions = () => {
-      if (!trackRef.current) return;
-      const trackWidth = trackRef.current.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const max = Math.max(0, trackWidth - viewportWidth + 60);
+      if (!trackRef.current || !trackRef.current.parentElement) return;
+      const containerWidth = trackRef.current.parentElement.clientWidth;
+      const cardWidth = containerWidth / cardsPerView;
+      const max = Math.max(0, (testimonials.length - cardsPerView) * cardWidth);
       setMaxTranslate(max);
     };
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
     return () => window.removeEventListener('resize', updateDimensions);
-  }, [testimonials, isMobile]);
+  }, [testimonials, isMobile, cardsPerView]);
 
   useEffect(() => {
     if (isMobile) return;
@@ -68,8 +80,8 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
 
   if (isMobile) {
     return (
-      <section className="section" style={{ backgroundColor: 'var(--bg-surface)', padding: '3rem 0' }}>
-        <div className="container" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+      <section className="section" style={{ backgroundColor: 'var(--bg-surface)', padding: '3.5rem 0' }}>
+        <div className="container" style={{ marginBottom: '2rem', textAlign: 'center' }}>
           <span className="eyebrow">{eyebrow}</span>
           <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h2)', color: 'var(--text-primary)' }}>
             {title}
@@ -88,7 +100,17 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
           }}
         >
           {testimonials.map((t, idx) => (
-            <TestimonialCard key={idx} quote={t.quote} author={t.author} origin={t.origin} />
+            <div
+              key={idx}
+              style={{
+                flex: '0 0 min(340px, 82vw)',
+                scrollSnapAlign: 'start',
+                borderRight: idx !== testimonials.length - 1 ? '1px solid var(--border-subtle)' : 'none',
+                paddingRight: '1rem',
+              }}
+            >
+              <TestimonialCard quote={t.quote} author={t.author} origin={t.origin} />
+            </div>
           ))}
         </div>
       </section>
@@ -102,7 +124,7 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
       ref={containerRef}
       style={{
         position: 'relative',
-        height: '300vh',
+        height: `${Math.max(180, 100 + (testimonials.length - cardsPerView) * 45)}vh`,
         backgroundColor: 'var(--bg-surface)',
       }}
     >
@@ -117,29 +139,41 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
           overflow: 'hidden',
         }}
       >
-        <div className="container" style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
+        <div className="container" style={{ marginBottom: '3.5rem', textAlign: 'center' }}>
           <span className="eyebrow">{eyebrow}</span>
           <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h2)', color: 'var(--text-primary)' }}>
             {title}
           </h2>
         </div>
 
-        <div
-          ref={trackRef}
-          style={{
-            display: 'flex',
-            gap: '2rem',
-            paddingLeft: 'max(1.5rem, calc((100vw - 1200px) / 2 + 1.5rem))',
-            paddingRight: '2rem',
-            transform: `translateX(${translateX}px)`,
-            willChange: 'transform',
-          }}
-        >
-          {testimonials.map((t, idx) => (
-            <TestimonialCard key={idx} quote={t.quote} author={t.author} origin={t.origin} />
-          ))}
+        <div className="container" style={{ overflow: 'hidden' }}>
+          <div
+            ref={trackRef}
+            style={{
+              display: 'flex',
+              width: '100%',
+              transform: `translateX(${translateX}px)`,
+              willChange: 'transform',
+            }}
+          >
+            {testimonials.map((t, idx) => (
+              <div
+                key={idx}
+                style={{
+                  flex: `0 0 ${100 / cardsPerView}%`,
+                  width: `${100 / cardsPerView}%`,
+                  borderRight: idx !== testimonials.length - 1 ? '1px solid var(--border-subtle)' : 'none',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                }}
+              >
+                <TestimonialCard quote={t.quote} author={t.author} origin={t.origin} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
+

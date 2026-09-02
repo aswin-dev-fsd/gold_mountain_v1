@@ -12,6 +12,7 @@ interface EditorialSectionProps {
   imagePosition?: 'left' | 'right';
   cta?: React.ReactNode;
   dark?: boolean;
+  backgroundImage?: string;
 }
 
 export const EditorialSection: React.FC<EditorialSectionProps> = ({
@@ -23,16 +24,42 @@ export const EditorialSection: React.FC<EditorialSectionProps> = ({
   imagePosition = 'left',
   cta,
   dark = false,
+  backgroundImage,
 }) => {
+  const isDark = dark || !!backgroundImage;
+
   return (
     <section
       className="section"
       style={{
-        backgroundColor: dark ? 'var(--bg-dark)' : 'transparent',
-        color: dark ? 'var(--text-light)' : 'var(--text-primary)',
+        position: 'relative',
+        backgroundColor: isDark ? 'var(--bg-dark)' : 'transparent',
+        color: isDark ? 'var(--text-light)' : 'var(--text-primary)',
+        overflow: 'hidden',
       }}
     >
-      <div className="container">
+      {backgroundImage && (
+        <>
+          <Image
+            src={backgroundImage}
+            alt={title}
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover', zIndex: 0 }}
+            priority={false}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(90deg, rgba(20, 36, 25, 0.92) 0%, rgba(20, 36, 25, 0.75) 50%, rgba(20, 36, 25, 0.4) 100%)',
+              zIndex: 1,
+            }}
+          />
+        </>
+      )}
+
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div
           style={{
             display: 'grid',
@@ -69,7 +96,7 @@ export const EditorialSection: React.FC<EditorialSectionProps> = ({
               className="editorial-serif"
               style={{
                 fontSize: 'var(--fs-h2)',
-                color: dark ? 'var(--text-light)' : 'var(--text-primary)',
+                color: isDark ? 'var(--text-light)' : 'var(--text-primary)',
                 marginBottom: 'var(--space-md)',
                 lineHeight: '1.2',
               }}
@@ -78,7 +105,7 @@ export const EditorialSection: React.FC<EditorialSectionProps> = ({
             </h2>
             <div
               style={{
-                color: dark ? 'var(--text-light-muted)' : 'var(--text-muted)',
+                color: isDark ? 'var(--text-light-muted)' : 'var(--text-muted)',
                 fontSize: 'var(--fs-body)',
                 lineHeight: '1.7',
                 marginBottom: cta ? 'var(--space-md)' : '0',
