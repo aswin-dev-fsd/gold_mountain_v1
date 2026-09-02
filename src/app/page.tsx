@@ -20,7 +20,7 @@ import {
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header transparentOnTop={true} />
 
       {/* --------------------------------------------------------------------------
          SECTION 01 — HERO
@@ -28,14 +28,14 @@ export default function HomePage() {
       <section
         style={{
           position: 'relative',
-          minHeight: '85vh',
+          minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'var(--bg-dark)',
           color: 'var(--text-light)',
           overflow: 'hidden',
-          padding: 'var(--space-2xl) 0',
+          padding: '6.5rem 0 3rem 0',
         }}
       >
         <Image

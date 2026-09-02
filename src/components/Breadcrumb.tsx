@@ -15,7 +15,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
     <nav
       aria-label="Breadcrumb"
       style={{
-        paddingTop: 'var(--space-md)',
+        paddingTop: 'calc(4.25rem + var(--space-md))',
         paddingBottom: 'var(--space-md)',
         fontSize: 'var(--fs-caption)',
         color: 'var(--text-muted)',

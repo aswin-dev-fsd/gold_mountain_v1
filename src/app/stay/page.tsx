@@ -33,27 +33,29 @@ export default function StayPage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Accommodations
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            A peaceful place <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              to stay.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Accommodations
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Comfortable spaces surrounded by nature, created for rest, privacy, and quiet reconnection amidst the sacred surroundings of Tiruvannamalai.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              A peaceful place <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                to stay.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Comfortable spaces surrounded by nature, created for rest, privacy, and quiet reconnection amidst the sacred surroundings of Tiruvannamalai.
+            </p>
+          </div>
         </div>
       </section>
 

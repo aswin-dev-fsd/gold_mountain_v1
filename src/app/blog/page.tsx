@@ -34,27 +34,29 @@ export default function BlogIndexPage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Resort Journal
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            Stories from <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              Gold Mountain.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Resort Journal
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Thoughts on wellness, nature, food, Ayurveda, and peaceful life in the sacred surroundings of Tiruvannamalai.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              Stories from <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                Gold Mountain.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Thoughts on wellness, nature, food, Ayurveda, and peaceful life in the sacred surroundings of Tiruvannamalai.
+            </p>
+          </div>
         </div>
       </section>
 

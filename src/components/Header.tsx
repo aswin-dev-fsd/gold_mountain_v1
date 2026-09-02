@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MobileNav } from './MobileNav';
@@ -14,21 +14,49 @@ const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ];
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  transparentOnTop?: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(!transparentOnTop);
+
+  useEffect(() => {
+    if (!transparentOnTop) return;
+
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [transparentOnTop]);
 
   return (
     <header
       style={{
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
-        backgroundColor: 'rgba(251, 249, 245, 0.95)',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid var(--border-subtle)',
+        left: 0,
+        right: 0,
+        backgroundColor: isScrolled ? 'rgba(251, 249, 245, 0.95)' : 'transparent',
+        backdropFilter: isScrolled ? 'blur(10px)' : 'none',
+        WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
+        borderBottom: isScrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
+        boxShadow: isScrolled ? '0 4px 20px rgba(0, 0, 0, 0.05)' : 'none',
         zIndex: 900,
-        height: 'var(--header-height)',
+        height: isScrolled ? '4.25rem' : '5.5rem',
         display: 'flex',
         alignItems: 'center',
+        transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -37,20 +65,21 @@ export const Header: React.FC = () => {
           <Image
             src="/images/logo white and black.png"
             alt="Gold Mountain Wellness Resort"
-            width={48}
-            height={48}
-            style={{ objectFit: 'contain' }}
+            width={isScrolled ? 42 : 48}
+            height={isScrolled ? 42 : 48}
+            style={{ objectFit: 'contain', transition: 'all 0.35s ease' }}
             priority
           />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span
               className="editorial-serif"
               style={{
-                fontSize: '1.25rem',
+                fontSize: isScrolled ? '1.15rem' : '1.3rem',
                 fontWeight: 700,
-                color: 'var(--text-primary)',
+                color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.1,
+                transition: 'color 0.35s ease, font-size 0.35s ease',
               }}
             >
               Gold Mountain
@@ -85,9 +114,10 @@ export const Header: React.FC = () => {
               style={{
                 fontSize: 'var(--fs-small)',
                 fontWeight: 500,
-                color: 'var(--text-primary)',
+                color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
                 letterSpacing: '0.04em',
                 textTransform: 'uppercase',
+                transition: 'color 0.35s ease',
               }}
             >
               {link.label}
@@ -97,7 +127,19 @@ export const Header: React.FC = () => {
 
         {/* Desktop Action */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <a href="#enquire" className="btn btn-secondary" style={{ padding: '0.6rem 1.25rem', fontSize: '0.75rem' }}>
+          <a
+            href="#enquire"
+            className="btn"
+            style={{
+              padding: isScrolled ? '0.5rem 1.15rem' : '0.6rem 1.35rem',
+              fontSize: '0.75rem',
+              backgroundColor: isScrolled ? 'transparent' : 'rgba(251, 249, 245, 0.15)',
+              color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
+              borderColor: isScrolled ? 'var(--border-subtle)' : 'rgba(251, 249, 245, 0.35)',
+              backdropFilter: isScrolled ? 'none' : 'blur(4px)',
+              transition: 'all 0.35s ease',
+            }}
+          >
             Enquire
           </a>
 
@@ -110,7 +152,8 @@ export const Header: React.FC = () => {
               border: 'none',
               cursor: 'pointer',
               padding: '0.5rem',
-              color: 'var(--text-primary)',
+              color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
+              transition: 'color 0.35s ease',
             }}
             className="mobile-toggle"
             aria-label="Open navigation menu"

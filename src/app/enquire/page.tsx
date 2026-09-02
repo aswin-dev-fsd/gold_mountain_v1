@@ -47,27 +47,29 @@ export default function EnquirePage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Reservations & Enquiries
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            Your stay begins <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              with a conversation.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Reservations & Enquiries
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Tell us when you'd like to visit, what you're looking for, and how we can make your stay meaningful. Our team will verify room options and confirm details directly with you.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              Your stay begins <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                with a conversation.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Tell us when you'd like to visit, what you're looking for, and how we can make your stay meaningful. Our team will verify room options and confirm details directly with you.
+            </p>
+          </div>
         </div>
       </section>
 

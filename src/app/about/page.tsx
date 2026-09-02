@@ -33,27 +33,29 @@ export default function AboutPage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Our Purpose
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            A place created <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              with purpose.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Our Purpose
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Gold Mountain Wellness Resort was conceived as a calm haven where guests can slow down, experience traditional wellness, and reconnect with nature in the presence of divine Arunachala.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              A place created <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                with purpose.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Gold Mountain Wellness Resort was conceived as a calm haven where guests can slow down, experience traditional wellness, and reconnect with nature in the presence of divine Arunachala.
+            </p>
+          </div>
         </div>
       </section>
 

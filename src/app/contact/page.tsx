@@ -46,27 +46,29 @@ export default function ContactPage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Get in Touch
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            Let's plan <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              your stay.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Get in Touch
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Have a question about staying, wellness programmes, or availability? Speak with us directly. We welcome inquiries from both international and Indian guests.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              Let's plan <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                your stay.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Have a question about staying, wellness programmes, or availability? Speak with us directly. We welcome inquiries from both international and Indian guests.
+            </p>
+          </div>
         </div>
       </section>
 

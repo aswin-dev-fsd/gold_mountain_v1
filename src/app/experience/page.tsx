@@ -33,27 +33,29 @@ export default function ExperiencePage() {
           position: 'relative',
         }}
       >
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Property Character
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            Experience the place <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              beyond the stay.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Property Character
             </span>
-          </h1>
-          <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
-            Gold Mountain is more than accommodation or wellness therapy. It is a living sanctuary shaped by natural elements, traditional reverence, and peaceful daily experiences.
-          </p>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              Experience the place <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                beyond the stay.
+              </span>
+            </h1>
+            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.7 }}>
+              Gold Mountain is more than accommodation or wellness therapy. It is a living sanctuary shaped by natural elements, traditional reverence, and peaceful daily experiences.
+            </p>
+          </div>
         </div>
       </section>
 

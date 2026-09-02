@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
+import { Playfair_Display } from 'next/font/google';
 import './globals.css';
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://goldmountainwellness.com'),
@@ -39,10 +46,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={playfair.variable}>
       <body>
         <main>{children}</main>
       </body>
     </html>
   );
 }
+

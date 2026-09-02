@@ -37,37 +37,39 @@ export default function WellnessPage() {
           overflow: 'hidden',
         }}
       >
-        <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '800px' }}>
-          <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-            Wellness Philosophy
-          </span>
-          <h1
-            className="editorial-serif"
-            style={{
-              fontSize: 'var(--fs-hero)',
-              color: 'var(--text-light)',
-              marginBottom: '1.25rem',
-              lineHeight: 1.15,
-            }}
-          >
-            A slower way <br />
-            <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
-              back to yourself.
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div style={{ maxWidth: '800px' }}>
+            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
+              Wellness Philosophy
             </span>
-          </h1>
-          <p
-            style={{
-              color: 'var(--text-light-muted)',
-              fontSize: 'var(--fs-body-lg)',
-              lineHeight: 1.7,
-              marginBottom: '2rem',
-            }}
-          >
-            Explore traditional wellness practices, nourishing food, and quiet spaces designed to help you reconnect with body and mind in the natural surroundings of Tiruvannamalai.
-          </p>
-          <a href="#packages" className="btn btn-primary">
-            Explore Wellness Packages
-          </a>
+            <h1
+              className="editorial-serif"
+              style={{
+                fontSize: 'var(--fs-hero)',
+                color: 'var(--text-light)',
+                marginBottom: '1.25rem',
+                lineHeight: 1.15,
+              }}
+            >
+              A slower way <br />
+              <span className="editorial-italic" style={{ color: 'var(--accent-gold)' }}>
+                back to yourself.
+              </span>
+            </h1>
+            <p
+              style={{
+                color: 'var(--text-light-muted)',
+                fontSize: 'var(--fs-body-lg)',
+                lineHeight: 1.7,
+                marginBottom: '2rem',
+              }}
+            >
+              Explore traditional wellness practices, nourishing food, and quiet spaces designed to help you reconnect with body and mind in the natural surroundings of Tiruvannamalai.
+            </p>
+            <a href="#packages" className="btn btn-primary">
+              Explore Wellness Packages
+            </a>
+          </div>
         </div>
       </section>
 
