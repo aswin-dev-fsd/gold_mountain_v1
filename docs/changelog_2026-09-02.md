@@ -57,6 +57,19 @@ This document serves as the unified summary of all code modifications, design im
 - **`src/components/EditorialSection.tsx` & `src/app/globals.css`**: Added `.editorial-image-block` and `.editorial-text-block` classes to ensure the image always stacks *above* the text on mobile breakpoints (`max-width: 768px`), regardless of the desktop alternating order.
 - **`src/app/contact/page.tsx` & `src/app/enquire/page.tsx`**: Upgraded hardcoded grid columns (e.g., `1fr 1fr`) in the booking form to responsive grids (`repeat(auto-fit, minmax(200px, 1fr))`) to prevent layout breakage on narrow screens.
 - **`src/components/Footer.tsx`**: Extracted the bottom bar styling into a `.footer-bottom-bar` class to center-align the text and stack items vertically on mobile (`max-width: 600px`).
-- **`src/components/EnquiryForm.tsx`**: Swapped inline grid styling on the CTA buttons for a `.form-cta-grid` class that responsibly collapses from side-by-side to a single stacked column on mobile (`max-width: 540px`).
-- **`src/app/page.tsx`**: Refined the room cards grid layout, reducing the `minmax` threshold from `280px` to `240px` for better fitting on medium-small viewports.
-- **`src/components/Header.tsx`**: Updated the `@media` query to hide `.btn-nav` along with `.desktop-nav` on mobile screens, since it's already present in the mobile navigation drawer.
+## 8. Mindful Dining Section Refactor & Ambient Layout
+- **`src/components/EditorialSection.tsx`**: Enhanced the `EditorialSection` component to support full-width background images (`backgroundImage`), ambient dark overlays, and `dark` mode props for flexible high-impact visual sections.
+- **`src/app/page.tsx`**: Refactored Section 07 ("Food that nourishes.") into a centered ambient section with `/images/food_background.png` as a full-width background, maintaining clean centered typography and preserving all original copy and action buttons.
+- **Asset Cleanup**: Removed design reference template `food_section_template.png` from production public asset paths to maintain repository cleanliness.
+
+## 9. Testimonial Section Alignment & Pinned Scroll Perfecting
+- **`src/components/PinnedTestimonials.tsx`**: Restored and perfected the pinned horizontal scrolling track. Fixed container-boundary math so that the default state displays 3 equal columns aligned flush inside `.container`, eliminating empty left gaps and preventing the 3rd review from being cut off on initial render.
+- **`src/components/Cards.tsx` (TestimonialCard)**: Replaced the thick gold left border with delicate vertical divider lines (`borderRight: 1px solid var(--border-subtle)`), providing a sophisticated editorial divider between horizontal cards.
+- **`src/app/page.tsx`**: Restored all 5 guest reflections to allow continuous, fluid horizontal scrolling across the full testimonial set.
+
+## 10. Asset Renaming & Photography Organization
+- **`temp/images/`**: Organized and renamed raw WhatsApp images to production-ready descriptive identifiers:
+  - `mindful_dining_sattvic_breakfast.jpeg` (Traditional South Indian sattvic meal)
+  - `meditation_buddha_sanctuary.jpeg` (Meditating Buddha stone statue altar)
+  - `resort_aerial_golden_hour_view.jpeg` (Aerial drone shot of resort and landscape)
+  - `resort_building_exterior_front.jpeg` (Front facade of resort accommodation block)
