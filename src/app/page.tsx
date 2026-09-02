@@ -14,6 +14,7 @@ import {
   ExperienceBlock,
   BlogCard,
   TestimonialCard,
+  PinnedTestimonials,
   EnquiryForm,
 } from '@/components';
 
@@ -264,36 +265,39 @@ export default function HomePage() {
       />
 
       {/* --------------------------------------------------------------------------
-         SECTION 08 — TRUST / TESTIMONIALS
+         SECTION 08 — TRUST / TESTIMONIALS (Pinned Horizontal Scroll)
          -------------------------------------------------------------------------- */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-surface)' }}>
-        <div className="container">
-          <SectionHeading
-            eyebrow="Guest Reflections"
-            title="Genuine Experiences at Gold Mountain"
-            align="center"
-          />
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: 'var(--space-md)',
-            }}
-          >
-            <TestimonialCard
-              quote="The quiet presence of Arunachala and the peaceful garden walk made our stay deeply restorative. The food was gentle on the stomach and truly nourishing."
-              author="International Wellness Guest"
-              origin="Stayed 7 Nights"
-            />
-            <TestimonialCard
-              quote="A true resort surrounded by nature. Not a clinical environment, but a warm, slow-paced haven where you can really rest."
-              author="Retreat Visitor"
-              origin="Stayed 5 Nights"
-            />
-          </div>
-        </div>
-      </section>
+      <PinnedTestimonials
+        eyebrow="Guest Reflections"
+        title="Genuine Experiences at Gold Mountain"
+        testimonials={[
+          {
+            quote: "The quiet presence of Arunachala and the peaceful garden walk made our stay deeply restorative. The food was gentle on the stomach and truly nourishing.",
+            author: "International Wellness Guest",
+            origin: "Stayed 7 Nights",
+          },
+          {
+            quote: "A true resort surrounded by nature. Not a clinical environment, but a warm, slow-paced haven where you can really rest.",
+            author: "Retreat Visitor",
+            origin: "Stayed 5 Nights",
+          },
+          {
+            quote: "The morning yoga sessions facing the hills brought an incredible sense of clarity. Truly a sacred sanctuary to reset mind and body.",
+            author: "Ayurveda & Yoga Guest",
+            origin: "Stayed 10 Nights",
+          },
+          {
+            quote: "Fresh, farm-to-table vegetarian meals that felt tailored to our digestive well-being. We left feeling lighter and energized.",
+            author: "Mindful Dining Guest",
+            origin: "Stayed 4 Nights",
+          },
+          {
+            quote: "Walking around the serene landscape at sunrise while observing hill views was a memory we will treasure forever.",
+            author: "Long-Stay Sanctuary Guest",
+            origin: "Stayed 14 Nights",
+          },
+        ]}
+      />
 
       {/* --------------------------------------------------------------------------
          SECTION 09 — BLOG / JOURNAL

@@ -20,3 +20,4 @@ export {
   TestimonialCard,
   PackageCard,
 } from './Cards';
+export { PinnedTestimonials } from './PinnedTestimonials';

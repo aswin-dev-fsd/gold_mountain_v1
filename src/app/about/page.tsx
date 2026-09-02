@@ -121,7 +121,7 @@ export default function AboutPage() {
               <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
                 "Our vision for Gold Mountain is to offer international and domestic guests an authentic sanctuary where body, mind, and spirit are gently restored through nature, healthy dining, and traditional care."
               </p>
-              <div style={{ fontSize: 'var(--fs-small)', color: 'var(--text-primary)', fontWeight: 700 }}>
+              <div style={{ fontSize: 'var(--fs-small)', color: 'var(--text-primary)', fontWeight: 500, letterSpacing: '0.03em' }}>
                 Gold Mountain Founders & Stewardship Team
               </div>
             </div>

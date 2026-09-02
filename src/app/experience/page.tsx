@@ -146,9 +146,9 @@ export default function ExperiencePage() {
                   border: '1px solid var(--border-subtle)',
                 }}
               >
-                <strong style={{ display: 'block', fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                <span style={{ display: 'block', fontSize: '1rem', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.25rem' }}>
                   {item.element}
-                </strong>
+                </span>
                 <span style={{ fontSize: 'var(--fs-caption)', color: 'var(--text-muted)' }}>{item.desc}</span>
               </div>
             ))}

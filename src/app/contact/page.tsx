@@ -221,7 +221,7 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <div>
-                    <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                    <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                       Full Name *
                     </label>
                     <input
@@ -237,7 +237,7 @@ export default function ContactPage() {
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div>
-                      <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Email Address *
                       </label>
                       <input
@@ -252,7 +252,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         WhatsApp / Phone
                       </label>
                       <input
@@ -268,7 +268,7 @@ export default function ContactPage() {
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
                     <div>
-                      <label htmlFor="enquiryType" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="enquiryType" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Enquiry Type
                       </label>
                       <select
@@ -286,7 +286,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="dates" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="dates" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Preferred Dates
                       </label>
                       <input
@@ -300,7 +300,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="guests" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="guests" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Guests
                       </label>
                       <select
@@ -318,7 +318,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                    <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                       Message
                     </label>
                     <textarea
@@ -388,9 +388,9 @@ export default function ContactPage() {
                   color: 'var(--text-muted)',
                 }}
               >
-                <strong style={{ display: 'block', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+                <span style={{ display: 'block', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.5rem' }}>
                   International Guests:
-                </strong>
+                </span>
                 Airport transfers can be arranged from Chennai International Airport (MAA). Please specify arrival details in your enquiry message.
               </div>
             </div>

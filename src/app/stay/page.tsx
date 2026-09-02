@@ -176,9 +176,9 @@ export default function StayPage() {
                   border: '1px solid var(--border-subtle)',
                 }}
               >
-                <strong style={{ display: 'block', color: 'var(--text-primary)', marginBottom: '0.25rem' }}>
+                <span style={{ display: 'block', color: 'var(--text-primary)', fontWeight: 500, marginBottom: '0.25rem' }}>
                   {amenity.name}
-                </strong>
+                </span>
                 <span style={{ fontSize: 'var(--fs-caption)', color: 'var(--text-muted)' }}>{amenity.desc}</span>
               </div>
             ))}

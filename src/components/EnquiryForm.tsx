@@ -66,7 +66,7 @@ export const EnquiryForm: React.FC = () => {
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
             <div>
-              <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+              <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                 Full Name *
               </label>
               <input
@@ -88,7 +88,7 @@ export const EnquiryForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+              <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                 Email Address *
               </label>
               <input
@@ -112,7 +112,7 @@ export const EnquiryForm: React.FC = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
             <div>
-              <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+              <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                 Phone / WhatsApp Number
               </label>
               <input
@@ -133,7 +133,7 @@ export const EnquiryForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="dates" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+              <label htmlFor="dates" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                 Preferred Travel Dates / Duration
               </label>
               <input
@@ -155,7 +155,7 @@ export const EnquiryForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+            <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
               Your Message or Specific Requirements
             </label>
             <textarea

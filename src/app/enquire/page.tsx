@@ -107,7 +107,7 @@ export default function EnquirePage() {
                     Enquiry Submitted
                   </h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-body-lg)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                    Thank you, {formData.name}. We have received your inquiry for <strong>{formData.interest}</strong> ({formData.arrivalDate || 'Dates requested'}).
+                    Thank you, {formData.name}. We have received your inquiry for <span style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{formData.interest}</span> ({formData.arrivalDate || 'Dates requested'}).
                   </p>
                   <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-small)', marginBottom: '1.5rem' }}>
                     Our team will verify room availability and contact you via email ({formData.email}) or WhatsApp.
@@ -119,7 +119,7 @@ export default function EnquirePage() {
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <div>
-                    <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                    <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                       Full Name *
                     </label>
                     <input
@@ -135,7 +135,7 @@ export default function EnquirePage() {
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div>
-                      <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Email Address *
                       </label>
                       <input
@@ -150,7 +150,7 @@ export default function EnquirePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         WhatsApp / Phone
                       </label>
                       <input
@@ -166,7 +166,7 @@ export default function EnquirePage() {
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div>
-                      <label htmlFor="arrivalDate" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="arrivalDate" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Arrival Date
                       </label>
                       <input
@@ -179,7 +179,7 @@ export default function EnquirePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="departureDate" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="departureDate" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Departure Date
                       </label>
                       <input
@@ -194,7 +194,7 @@ export default function EnquirePage() {
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                     <div>
-                      <label htmlFor="guests" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="guests" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Number of Guests
                       </label>
                       <select
@@ -211,7 +211,7 @@ export default function EnquirePage() {
                     </div>
 
                     <div>
-                      <label htmlFor="interest" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                      <label htmlFor="interest" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                         Interested In
                       </label>
                       <select
@@ -230,7 +230,7 @@ export default function EnquirePage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.4rem' }}>
+                    <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
                       Additional Details or Requests
                     </label>
                     <textarea

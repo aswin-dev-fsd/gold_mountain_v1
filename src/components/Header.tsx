@@ -42,6 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
 
   return (
     <header
+      data-scrolled={isScrolled ? 'true' : 'false'}
       style={{
         position: 'fixed',
         top: 0,
@@ -67,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
               className="editorial-serif"
               style={{
                 fontSize: '1.5rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
                 letterSpacing: '-0.02em',
                 lineHeight: 1.1,
@@ -82,7 +83,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
                 textTransform: 'uppercase',
                 letterSpacing: '0.2em',
                 color: 'var(--accent-gold)',
-                fontWeight: 700,
+                fontWeight: 500,
               }}
             >
               Wellness Resort
@@ -121,16 +122,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a
             href="#enquire"
-            className="btn"
-            style={{
-              padding: '0.5rem 1.15rem',
-              fontSize: '0.75rem',
-              backgroundColor: isScrolled ? 'transparent' : 'rgba(251, 249, 245, 0.15)',
-              color: isScrolled ? 'var(--text-primary)' : 'var(--text-light)',
-              borderColor: isScrolled ? 'var(--border-subtle)' : 'rgba(251, 249, 245, 0.35)',
-              backdropFilter: isScrolled ? 'none' : 'blur(4px)',
-              transition: 'all 0.35s ease',
-            }}
+            className="btn btn-nav"
           >
             Enquire
           </a>

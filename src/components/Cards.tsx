@@ -192,7 +192,7 @@ export const ExperienceBlock: React.FC<ExperienceBlockProps> = ({
         }}
       />
       <div style={{ position: 'relative', zIndex: 10, padding: '1.75rem', color: 'var(--text-light)' }}>
-        <span style={{ fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent-gold)', fontWeight: 700, display: 'block', marginBottom: '0.25rem' }}>
+        <span style={{ fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent-gold)', fontWeight: 500, display: 'block', marginBottom: '0.25rem' }}>
           {subtitle}
         </span>
         <h3 className="editorial-serif" style={{ fontSize: '1.5rem', color: 'var(--text-light)', marginBottom: '0.5rem' }}>
@@ -293,6 +293,9 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ quote, author, ori
         flexDirection: 'column',
         justifyContent: 'space-between',
         height: '100%',
+        flex: '0 0 auto',
+        width: 'min(450px, 85vw)',
+        scrollSnapAlign: 'start',
       }}
     >
       <p
@@ -307,9 +310,9 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ quote, author, ori
         "{quote}"
       </p>
       <div>
-        <strong style={{ display: 'block', fontSize: 'var(--fs-small)', color: 'var(--text-primary)' }}>
+        <span style={{ display: 'block', fontSize: 'var(--fs-small)', fontWeight: 500, letterSpacing: '0.03em', color: 'var(--text-primary)' }}>
           {author}
-        </strong>
+        </span>
         {origin && <span style={{ fontSize: 'var(--fs-caption)', color: 'var(--text-muted)' }}>{origin}</span>}
       </div>
     </div>
@@ -355,9 +358,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({
       </p>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <strong style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>
+        <span style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem', color: 'var(--text-primary)', fontWeight: 500 }}>
           Programme Includes:
-        </strong>
+        </span>
         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: 'var(--fs-small)', color: 'var(--text-muted)' }}>
           {includes.map((item, idx) => (
             <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -369,7 +372,7 @@ export const PackageCard: React.FC<PackageCardProps> = ({
 
       <div style={{ marginTop: 'auto', paddingTop: '1.5rem', borderTop: '1px solid var(--border-subtle)' }}>
         <div style={{ fontSize: 'var(--fs-caption)', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-          Investment: <strong style={{ color: 'var(--text-primary)', fontSize: '1rem' }}>{priceInfo}</strong>
+          Investment: <span style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: 500 }}>{priceInfo}</span>
         </div>
         <WhatsAppCTA message={`Hello, I would like to enquire about the ${title} (${duration}).`}>
           Enquire for Package

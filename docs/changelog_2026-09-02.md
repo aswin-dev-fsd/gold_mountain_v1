@@ -35,3 +35,19 @@ This document serves as the unified summary of all code modifications, design im
   - `src/app/contact/page.tsx`
   - `src/app/about/page.tsx`
   - `src/app/blog/page.tsx`
+
+## 5. New Components & Pages Integration
+- **`src/components/PinnedTestimonials.tsx`**: Created a new `PinnedTestimonials` carousel component to showcase guest feedback.
+- **Page Integrations**: Integrated the new `PinnedTestimonials` component into multiple pages to build trust and social proof:
+  - `src/app/page.tsx` (Home)
+  - `src/app/about/page.tsx`
+  - `src/app/contact/page.tsx`
+  - `src/app/enquire/page.tsx`
+  - `src/app/experience/page.tsx`
+  - `src/app/stay/page.tsx`
+
+## 6. Further Component Refinements
+- **`src/components/Cards.tsx` (TestimonialCard)**: Updated styling to support horizontal scrolling (`scrollSnapAlign: 'start'`, `flex: '0 0 auto'`, `width: 'min(450px, 85vw)'`). Softened author typography by changing `font-weight` from `700` to `500`.
+- **`src/components/Cards.tsx` (PackageCard)**: Replaced heavy `<strong>` tags with `span` elements set to `font-weight: 500` for a softer appearance.
+- **`src/components/EnquiryForm.tsx`**: Softened all form field labels by changing `font-weight` from `700` to `500` and enforcing `--text-primary` color.
+- **`src/components/Header.tsx` & `src/app/globals.css`**: Refined header typography by reducing the "Gold Mountain" `font-weight` from `700` to `600`, and "Wellness Resort" from `700` to `500`. Extracted the inline styling of the header's "Enquire" button into a cleaner `.btn-nav` class in `globals.css` triggered via a `data-scrolled` attribute on the header.
