@@ -6,6 +6,7 @@ This document summarizes all code modifications and design improvements applied 
 - **`src/app/layout.tsx`**: Integrated and configured `Playfair_Display` via `next/font/google` for optimized, zero-layout-shift font loading.
 - **`src/app/globals.css`**: Replaced all instances of "The Seasons" font with `Playfair Display`.
 - **`src/app/globals.css`**: Adjusted the font-weight of buttons and eyebrows from `700` (Garet Heavy) to `500/600` to fix overly thick, blocky text, resulting in a sleeker, more elegant typography hierarchy.
+- **`src/app/globals.css`**: Updated button styling to increase `border-radius` (to `6px`) and refine padding, giving CTAs a softer, more modern appearance.
 
 ## 2. Header & Navigation Refactoring
 - **`src/components/Header.tsx`**: Overhauled the Header component to support a state-aware design:
