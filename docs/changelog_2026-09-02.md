@@ -51,3 +51,12 @@ This document serves as the unified summary of all code modifications, design im
 - **`src/components/Cards.tsx` (PackageCard)**: Replaced heavy `<strong>` tags with `span` elements set to `font-weight: 500` for a softer appearance.
 - **`src/components/EnquiryForm.tsx`**: Softened all form field labels by changing `font-weight` from `700` to `500` and enforcing `--text-primary` color.
 - **`src/components/Header.tsx` & `src/app/globals.css`**: Refined header typography by reducing the "Gold Mountain" `font-weight` from `700` to `600`, and "Wellness Resort" from `700` to `500`. Extracted the inline styling of the header's "Enquire" button into a cleaner `.btn-nav` class in `globals.css` triggered via a `data-scrolled` attribute on the header.
+
+## 7. Responsive Layout Fixes & Mobile Refinements
+- **`src/components/PinnedTestimonials.tsx`**: Added mobile detection (`window.innerWidth <= 768`). On mobile, the desktop pinned-scroll animation is bypassed in favor of a native, touch-friendly horizontal scrolling layout with `scrollSnapType: 'x mandatory'`.
+- **`src/components/EditorialSection.tsx` & `src/app/globals.css`**: Added `.editorial-image-block` and `.editorial-text-block` classes to ensure the image always stacks *above* the text on mobile breakpoints (`max-width: 768px`), regardless of the desktop alternating order.
+- **`src/app/contact/page.tsx` & `src/app/enquire/page.tsx`**: Upgraded hardcoded grid columns (e.g., `1fr 1fr`) in the booking form to responsive grids (`repeat(auto-fit, minmax(200px, 1fr))`) to prevent layout breakage on narrow screens.
+- **`src/components/Footer.tsx`**: Extracted the bottom bar styling into a `.footer-bottom-bar` class to center-align the text and stack items vertically on mobile (`max-width: 600px`).
+- **`src/components/EnquiryForm.tsx`**: Swapped inline grid styling on the CTA buttons for a `.form-cta-grid` class that responsibly collapses from side-by-side to a single stacked column on mobile (`max-width: 540px`).
+- **`src/app/page.tsx`**: Refined the room cards grid layout, reducing the `minmax` threshold from `280px` to `240px` for better fitting on medium-small viewports.
+- **`src/components/Header.tsx`**: Updated the `@media` query to hide `.btn-nav` along with `.desktop-nav` on mobile screens, since it's already present in the mobile navigation drawer.

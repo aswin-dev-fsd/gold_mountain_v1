@@ -176,7 +176,7 @@ export const EnquiryForm: React.FC = () => {
             />
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '0.5rem' }}>
+          <div className="form-cta-grid">
             <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.85rem 1rem' }}>
               Send Email
             </button>

@@ -106,19 +106,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div
-          style={{
-            paddingTop: 'var(--space-md)',
-            borderTop: '1px solid var(--border-dark)',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '1rem',
-            fontSize: 'var(--fs-caption)',
-            color: 'var(--text-light-muted)',
-          }}
-        >
+        <div className="footer-bottom-bar">
           <p style={{ color: 'inherit' }}>
             &copy; {new Date().getFullYear()} Gold Mountain Wellness Resort. All rights reserved.
           </p>

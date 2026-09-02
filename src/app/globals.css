@@ -315,3 +315,48 @@ header[data-scrolled="true"] .btn-nav:hover {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Responsive Form CTA Grid */
+.form-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 540px) {
+  .form-cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EditorialSection Mobile Image Order */
+@media (max-width: 768px) {
+  .editorial-image-block {
+    order: 1 !important;
+  }
+  .editorial-text-block {
+    order: 2 !important;
+  }
+}
+
+/* Footer Bottom Bar Responsive */
+.footer-bottom-bar {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-dark);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fs-caption);
+  color: var(--text-light-muted);
+}
+
+@media (max-width: 600px) {
+  .footer-bottom-bar {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}

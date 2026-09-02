@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
 
       <style jsx>{`
         @media (max-width: 900px) {
-          .desktop-nav {
+          .desktop-nav, .btn-nav {
             display: none !important;
           }
           .mobile-toggle {

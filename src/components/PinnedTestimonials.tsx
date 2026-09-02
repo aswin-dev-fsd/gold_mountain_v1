@@ -18,8 +18,20 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
   const trackRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [maxTranslate, setMaxTranslate] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const updateDimensions = () => {
       if (!trackRef.current) return;
       const trackWidth = trackRef.current.scrollWidth;
@@ -31,9 +43,11 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
     return () => window.removeEventListener('resize', updateDimensions);
-  }, [testimonials]);
+  }, [testimonials, isMobile]);
 
   useEffect(() => {
+    if (isMobile) return;
+
     const handleScroll = () => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
@@ -50,7 +64,36 @@ export const PinnedTestimonials: React.FC<PinnedTestimonialsProps> = ({
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) {
+    return (
+      <section className="section" style={{ backgroundColor: 'var(--bg-surface)', padding: '3rem 0' }}>
+        <div className="container" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+          <span className="eyebrow">{eyebrow}</span>
+          <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h2)', color: 'var(--text-primary)' }}>
+            {title}
+          </h2>
+        </div>
+        <div
+          className="hide-scrollbar"
+          style={{
+            display: 'flex',
+            gap: '1.25rem',
+            overflowX: 'auto',
+            scrollSnapType: 'x mandatory',
+            paddingLeft: '1.5rem',
+            paddingRight: '1.5rem',
+            paddingBottom: '0.5rem',
+          }}
+        >
+          {testimonials.map((t, idx) => (
+            <TestimonialCard key={idx} quote={t.quote} author={t.author} origin={t.origin} />
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   const translateX = -(scrollProgress * maxTranslate);
 

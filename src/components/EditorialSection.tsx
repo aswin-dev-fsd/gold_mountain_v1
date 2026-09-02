@@ -43,6 +43,7 @@ export const EditorialSection: React.FC<EditorialSectionProps> = ({
         >
           {/* Image Block */}
           <div
+            className="editorial-image-block"
             style={{
               order: imagePosition === 'right' ? 2 : 1,
               position: 'relative',
@@ -62,7 +63,7 @@ export const EditorialSection: React.FC<EditorialSectionProps> = ({
           </div>
 
           {/* Text Block */}
-          <div style={{ order: imagePosition === 'right' ? 1 : 2 }}>
+          <div className="editorial-text-block" style={{ order: imagePosition === 'right' ? 1 : 2 }}>
             {eyebrow && <span className="eyebrow">{eyebrow}</span>}
             <h2
               className="editorial-serif"
