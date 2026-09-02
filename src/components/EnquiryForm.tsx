@@ -176,15 +176,12 @@ export const EnquiryForm: React.FC = () => {
             />
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '0.5rem' }}>
-            <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-              Send Enquiry via Email
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '0.5rem' }}>
+            <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.85rem 1rem' }}>
+              Send Email
             </button>
-            <div style={{ textAlign: 'center', fontSize: 'var(--fs-caption)', color: 'var(--text-muted)' }}>
-              — OR —
-            </div>
-            <WhatsAppCTA message={whatsappMessage} className="w-full" style={{ width: '100%', justifyContent: 'center' }}>
-              Enquire Immediately on WhatsApp
+            <WhatsAppCTA message={whatsappMessage} style={{ width: '100%', padding: '0.85rem 1rem', justifyContent: 'center' }}>
+              WhatsApp
             </WhatsAppCTA>
           </div>
         </form>

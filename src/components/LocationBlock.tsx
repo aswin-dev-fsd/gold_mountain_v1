@@ -30,13 +30,13 @@ export const LocationBlock: React.FC<LocationBlockProps> = ({
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: 'var(--fs-small)' }}>
               <div>
-                <strong>Location:</strong> Tiruvannamalai, Tamil Nadu, India
+                <span style={{ color: 'var(--text-primary)' }}>Location:</span> <span style={{ color: 'var(--text-muted)' }}>Tiruvannamalai, Tamil Nadu, India</span>
               </div>
               <div>
-                <strong>Surroundings:</strong> Peaceful mountain views, lush greenery, serene walking paths
+                <span style={{ color: 'var(--text-primary)' }}>Surroundings:</span> <span style={{ color: 'var(--text-muted)' }}>Peaceful mountain views, lush greenery, serene walking paths</span>
               </div>
               <div>
-                <strong>Access:</strong> Approx. 3.5 hours from Chennai International Airport
+                <span style={{ color: 'var(--text-primary)' }}>Access:</span> <span style={{ color: 'var(--text-muted)' }}>Approx. 3.5 hours from Chennai International Airport</span>
               </div>
             </div>
           </div>

@@ -86,11 +86,12 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnTop = false }) => {
             </span>
             <span
               style={{
-                fontSize: '0.65rem',
+                fontSize: isScrolled ? '0.55rem' : '0.65rem',
                 textTransform: 'uppercase',
                 letterSpacing: '0.15em',
                 color: 'var(--accent-gold)',
                 fontWeight: 700,
+                transition: 'font-size 0.35s ease',
               }}
             >
               Wellness Resort

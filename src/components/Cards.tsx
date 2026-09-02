@@ -230,11 +230,11 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           href={`/blog/${slug}`}
           style={{
             marginTop: 'auto',
-            fontSize: 'var(--fs-small)',
-            fontWeight: 700,
+            fontSize: 'var(--fs-caption)',
+            fontWeight: 400,
             color: 'var(--text-primary)',
             textTransform: 'uppercase',
-            letterSpacing: '0.08em',
+            letterSpacing: '0.12em',
           }}
         >
           Read Article &rarr;

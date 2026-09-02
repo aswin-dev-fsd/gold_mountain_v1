@@ -46,10 +46,10 @@ export const Footer: React.FC = () => {
                 color: 'var(--accent-gold)',
                 fontSize: 'var(--fs-small)',
                 textTransform: 'uppercase',
-                letterSpacing: '0.12em',
+                letterSpacing: '0.2em',
                 marginBottom: '1.25rem',
                 fontFamily: 'var(--font-primary)',
-                fontWeight: 700,
+                fontWeight: 400,
               }}
             >
               Explore
@@ -79,10 +79,10 @@ export const Footer: React.FC = () => {
                 color: 'var(--accent-gold)',
                 fontSize: 'var(--fs-small)',
                 textTransform: 'uppercase',
-                letterSpacing: '0.12em',
+                letterSpacing: '0.2em',
                 marginBottom: '1.25rem',
                 fontFamily: 'var(--font-primary)',
-                fontWeight: 700,
+                fontWeight: 400,
               }}
             >
               Connect

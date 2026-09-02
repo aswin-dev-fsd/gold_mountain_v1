@@ -79,16 +79,17 @@ export default function BlogIndexPage() {
               <span
                 key={cat}
                 style={{
-                  padding: '0.5rem 1.25rem',
+                  padding: '0.6rem 1.5rem',
                   fontSize: 'var(--fs-caption)',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  fontWeight: 700,
-                  borderRadius: '2px',
-                  backgroundColor: idx === 0 ? 'var(--bg-dark)' : 'var(--bg-surface)',
+                  letterSpacing: '0.12em',
+                  fontWeight: 400,
+                  borderRadius: '999px',
+                  backgroundColor: idx === 0 ? 'var(--bg-dark)' : 'transparent',
                   color: idx === 0 ? 'var(--text-light)' : 'var(--text-primary)',
-                  border: '1px solid var(--border-subtle)',
+                  border: idx === 0 ? '1px solid var(--bg-dark)' : '1px solid var(--border-subtle)',
                   cursor: 'pointer',
+                  transition: 'all 0.3s ease',
                 }}
               >
                 {cat}
