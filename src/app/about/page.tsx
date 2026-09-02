@@ -75,8 +75,8 @@ export default function AboutPage() {
             </p>
           </>
         }
-        imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
-        imageAlt="Gold Mountain resort grounds and view"
+        imageSrc="/images/resort_building_exterior_front.webp"
+        imageAlt="Gold Mountain resort grounds and building facade"
         imagePosition="left"
       />
 
@@ -105,8 +105,8 @@ export default function AboutPage() {
           >
             <div style={{ position: 'relative', aspectRatio: '4/5', width: '100%', borderRadius: '2px', overflow: 'hidden' }}>
               <Image
-                src="/images/Image reference 2 ( Wellness page ) .jpeg"
-                alt="Gold Mountain Founder"
+                src="/images/meditation_buddha_sanctuary.webp"
+                alt="Gold Mountain Sanctuary Altar"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 style={{ objectFit: 'cover' }}

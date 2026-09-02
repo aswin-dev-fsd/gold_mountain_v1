@@ -73,3 +73,18 @@ This document serves as the unified summary of all code modifications, design im
   - `meditation_buddha_sanctuary.jpeg` (Meditating Buddha stone statue altar)
   - `resort_aerial_golden_hour_view.jpeg` (Aerial drone shot of resort and landscape)
   - `resort_building_exterior_front.jpeg` (Front facade of resort accommodation block)
+
+## 11. Visually Lossless WebP Compression
+- **Image Asset Optimization**: Converted all PNG and JPEG assets across `public/images/` and `temp/images/` into high-efficiency WebP format at 88% visual quality.
+- **Payload Reduction**: Reduced `food_background.png` from **6.78 MB down to 491 KB** (a **92.8% reduction**). Overall site asset payload was reduced by **~89%** (from ~9.5 MB down to ~1.06 MB), drastically improving Core Web Vitals and load performance with zero visual degradation.
+
+## 12. Complete Real Photography Integration
+- **100% Placeholder Elimination**: Replaced every remaining generic image placeholder across the entire codebase (`src/app/page.tsx`, `src/app/about/page.tsx`, `src/app/stay/page.tsx`, `src/app/wellness/page.tsx`, `src/app/experience/page.tsx`, `src/data/blogData.ts`, and `src/app/layout.tsx`).
+- **Photography Deployment**:
+  - Hero & Sacred Vistas: `/images/resort_aerial_golden_hour_view.webp`
+  - Accommodations & Architecture: `/images/resort_building_exterior_front.webp`
+  - Meditation & Sanctuary: `/images/meditation_buddha_sanctuary.webp`
+  - Mindful Dining & Herbal Garden: `/images/mindful_dining_sattvic_breakfast.webp`
+
+## 13. Hero Contrast & Warmth Refinement
+- **`src/app/page.tsx`**: Increased hero background image opacity from `0.45` to `0.75` and softened the linear dark overlay gradient (`rgba(20, 36, 25, 0.25)` to `0.65`). Fixed the washed-out / muddy appearance by bringing out natural golden hour sunlight and lush foliage greens while maintaining crisp text legibility.

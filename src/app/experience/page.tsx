@@ -70,7 +70,7 @@ export default function ExperiencePage() {
             Oriented directly toward the sacred hill stretch, designated viewing pavilions offer quiet space for sunrise reflection, meditation, and absorbing the calm presence of divine Arunachala.
           </p>
         }
-        imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+        imageSrc="/images/resort_aerial_golden_hour_view.webp"
         imageAlt="Sacred mountain view from Gold Mountain"
         imagePosition="left"
       />
@@ -97,14 +97,14 @@ export default function ExperiencePage() {
               title="The Cow Shelter (Goshala)"
               subtitle="Tradition & Care"
               description="A serene shelter built in the spirit of traditional Indian rural reverence, housing indigenous cows cared for with quiet affection."
-              imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+              imageSrc="/images/resort_building_exterior_front.webp"
             />
 
             <ExperienceBlock
               title="The Natural Fish Pond"
               subtitle="Still Water"
               description="A central lily pond surrounded by natural stone seating, offering quiet moments to observe water movement and aquatic flora."
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/meditation_buddha_sanctuary.webp"
             />
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function ExperiencePage() {
             </p>
           </>
         }
-        imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+        imageSrc="/images/mindful_dining_sattvic_breakfast.webp"
         imageAlt="Herbal gardens at Gold Mountain"
         imagePosition="right"
       />

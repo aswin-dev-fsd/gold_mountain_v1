@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Gold Mountain Wellness Resort',
     images: [
       {
-        url: '/images/Image Reference 1 ( homepage ).jpeg',
+        url: '/images/resort_aerial_golden_hour_view.webp',
         width: 1200,
         height: 630,
         alt: 'Gold Mountain Wellness Resort Surroundings',

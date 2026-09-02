@@ -162,7 +162,7 @@ export default function WellnessPage() {
             </p>
           </>
         }
-        imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+        imageSrc="/images/meditation_buddha_sanctuary.webp"
         imageAlt="Ayurvedic oil therapy ingredients"
         imagePosition="left"
       />

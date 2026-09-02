@@ -81,7 +81,7 @@ export default function StayPage() {
               title="Deluxe Garden Room"
               subtitle="Ground Level | Garden Views | Up to 2 Guests"
               description="Spacious garden room featuring natural timber finishes, private verandah opening to lush flora, and gentle cross-ventilation."
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/resort_building_exterior_front.webp"
               amenities={[
                 'King Size Bed',
                 'Private Verandah',
@@ -98,7 +98,7 @@ export default function StayPage() {
               title="Mountain View Suite"
               subtitle="Upper Level | Arunachala Views | Up to 2-3 Guests"
               description="Elevated suite offering unobstructed vistas of the sacred hill, an expansive seating area, and private balcony for sunrise contemplation."
-              imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+              imageSrc="/images/resort_aerial_golden_hour_view.webp"
               amenities={[
                 'King Size Bed',
                 'Private Mountain Balcony',
@@ -130,7 +130,7 @@ export default function StayPage() {
             </p>
           </>
         }
-        imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+        imageSrc="/images/resort_building_exterior_front.webp"
         imageAlt="Peaceful mountain view verandah"
         imagePosition="right"
         cta={

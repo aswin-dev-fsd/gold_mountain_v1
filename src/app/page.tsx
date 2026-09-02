@@ -40,21 +40,21 @@ export default function HomePage() {
         }}
       >
         <Image
-          src="/images/Image Reference 1 ( homepage ).jpeg"
-          alt="Gold Mountain Wellness Resort surroundings at Arunachala"
+          src="/images/resort_aerial_golden_hour_view.webp"
+          alt="Gold Mountain Wellness Resort aerial view at Arunachala"
           fill
           priority
           sizes="100vw"
           style={{
             objectFit: 'cover',
-            opacity: 0.45,
+            opacity: 0.75,
           }}
         />
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, rgba(20, 36, 25, 0.6) 0%, rgba(20, 36, 25, 0.85) 100%)',
+            background: 'linear-gradient(to bottom, rgba(20, 36, 25, 0.25) 0%, rgba(20, 36, 25, 0.65) 100%)',
           }}
         />
 
@@ -158,8 +158,8 @@ export default function HomePage() {
             </p>
           </>
         }
-        imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
-        imageAlt="Resort architecture and surrounding nature"
+        imageSrc="/images/resort_building_exterior_front.webp"
+        imageAlt="Resort building facade and courtyard entrance"
         imagePosition="left"
         cta={<PrimaryButton href="/about">Explore the Resort</PrimaryButton>}
       />
@@ -186,7 +186,7 @@ export default function HomePage() {
               title="Deluxe Garden Room"
               subtitle="Ground Level | Garden Views"
               description="Spacious room featuring private garden views, natural wooden finishes, and serene natural ventilation."
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/resort_building_exterior_front.webp"
               amenities={['King Bed', 'Private Verandah', 'Garden View', 'Complimentary Tea']}
               href="#enquire"
             />
@@ -194,7 +194,7 @@ export default function HomePage() {
               title="Mountain View Suite"
               subtitle="Upper Level | Arunachala Views"
               description="Elevated suite offering direct vistas of the sacred hill stretch, expansive seating area, and private balcony."
-              imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+              imageSrc="/images/resort_aerial_golden_hour_view.webp"
               amenities={['King Bed', 'Mountain Balcony', 'Spacious Lounge', 'Pure Natural Toiletries']}
               href="#enquire"
             />
@@ -224,19 +224,19 @@ export default function HomePage() {
               title="Shiva Shakthi Darshanam"
               subtitle="Sacred Vistas"
               description="Quiet viewing spots oriented toward the mountain stretch for quiet contemplation."
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/resort_aerial_golden_hour_view.webp"
             />
             <ExperienceBlock
               title="Farm & Herbal Garden"
               subtitle="Nourishment"
               description="Homegrown vegetables and fresh herbs cultivated for our wellness kitchen."
-              imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+              imageSrc="/images/mindful_dining_sattvic_breakfast.webp"
               />
             <ExperienceBlock
               title="Quiet Pond & Sanctuary"
               subtitle="Reflection"
               description="Calm water features surrounded by natural flora and gentle bird calls."
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/meditation_buddha_sanctuary.webp"
             />
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function HomePage() {
         className="section"
         style={{
           position: 'relative',
-          backgroundImage: 'url(/images/food_background.png)',
+          backgroundImage: 'url(/images/food_background.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: 'var(--space-2xl) 0',
@@ -359,7 +359,7 @@ export default function HomePage() {
               category="Location & Nature"
               excerpt="How the natural surroundings of Tiruvannamalai offer an ideal sanctuary to slow down and listen inwardly."
               date="August 2026"
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/resort_aerial_golden_hour_view.webp"
               slug="rhythm-of-arunachala"
             />
             <BlogCard
@@ -367,7 +367,7 @@ export default function HomePage() {
               category="Nutrition"
               excerpt="Exploring how simple, fresh, seasonal meals support digestion and overall vitality during a wellness stay."
               date="August 2026"
-              imageSrc="/images/Image reference 2 ( Wellness page ) .jpeg"
+              imageSrc="/images/mindful_dining_sattvic_breakfast.webp"
               slug="mindful-dining-principles"
             />
             <BlogCard
@@ -375,7 +375,7 @@ export default function HomePage() {
               category="Lifestyle"
               excerpt="Simple practices to disconnect from digital noise and reconnect with natural circadian rhythms."
               date="August 2026"
-              imageSrc="/images/Image Reference 1 ( homepage ).jpeg"
+              imageSrc="/images/meditation_buddha_sanctuary.webp"
               slug="beginners-guide-to-rest"
             />
           </div>
