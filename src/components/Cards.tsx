@@ -120,26 +120,22 @@ export const WellnessOfferingCard: React.FC<WellnessOfferingProps> = ({
         transition: 'all 0.3s ease',
       }}
     >
-      {/* Decorative Overlapping Circle & Icon Container */}
+      {/* Bottom Right Icon Container (No background circle) */}
       <div 
         style={{
           position: 'absolute',
-          bottom: '-30px',
-          right: '-30px',
-          width: '160px',
-          height: '160px',
-          borderRadius: '50%',
-          backgroundColor: 'rgba(0, 0, 0, 0.03)',
+          bottom: '2rem',
+          right: '2rem',
+          width: '64px',
+          height: '64px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          paddingBottom: '25px',
-          paddingRight: '25px',
-          zIndex: 0,
+          zIndex: 1,
         }}
       >
         {icon && (
-          <div style={{ color: 'var(--accent-gold)', width: '38px', height: '38px' }}>
+          <div style={{ color: 'var(--accent-gold)', width: '64px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {icon}
           </div>
         )}

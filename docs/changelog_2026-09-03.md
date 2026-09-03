@@ -27,3 +27,8 @@ This document details all structural modifications, component styling updates, r
 - **`src/components/EnquiryForm.tsx`**: Refactored the form wrapper styling to support side-by-side section placement:
   - Removed fixed `maxWidth: '720px'` constraint in favor of `maxWidth: '100%'` and `margin: '0'`.
   - Added elevated depth with `box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15)` and updated `border-radius` to `4px`.
+
+## 5. Card Iconography & Layout Polish (`WellnessOfferingCard`)
+- **`src/components/Cards.tsx`**: Simplified `WellnessOfferingCard` bottom-right icon container by removing the faint background circle. Positioned gold icons neatly in the bottom right corner (`bottom: 2rem`, `right: 2rem`, `64px x 64px`).
+- **`src/app/page.tsx`**: Updated SVG icon viewBox rendering scale from `42px` to `64px` for high-dpi clarity and sharper visual impact.
+
