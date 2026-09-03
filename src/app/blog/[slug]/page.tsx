@@ -124,7 +124,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               Plan your wellness stay in Tiruvannamalai amidst natural surroundings and mountain views.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <PrimaryButton href="/wellness">Explore Wellness</PrimaryButton>
+              <PrimaryButton href="/wellness" variant="gold">Explore Wellness</PrimaryButton>
               <WhatsAppCTA message={`Hello, I read your article "${post.title}" and would like to inquire about staying at Gold Mountain.`}>
                 Enquire on WhatsApp
               </WhatsAppCTA>

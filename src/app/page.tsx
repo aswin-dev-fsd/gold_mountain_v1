@@ -88,8 +88,10 @@ export default function HomePage() {
             A peaceful resort where traditional wellness, healthy food, and nature come together in the natural and spiritual surroundings of Tiruvannamalai.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <PrimaryButton href="/wellness">Explore Wellness</PrimaryButton>
-            <SecondaryButton href="/stay" style={{ borderColor: 'var(--border-dark)', color: 'var(--text-light)' }}>
+            <PrimaryButton href="/wellness" variant="gold">
+              Explore Wellness
+            </PrimaryButton>
+            <SecondaryButton href="/stay" className="btn-hero-outline">
               Plan Your Stay
             </SecondaryButton>
           </div>

@@ -56,3 +56,11 @@ This document serves as the unified summary of all structural modifications, com
   - `src/app/wellness/page.tsx` ("Enquire Today")
 - **Layout Consistency**: Unified section padding (`padding: var(--space-2xl) 0`), text block flex proportions (`.plan-visit-text-block`), and responsive mobile collapse behavior across the entire site.
 
+## 7. Luxury Gold CTA Button System & Hero Button Styling
+- **`src/app/globals.css`**: Introduced `.btn-gold` class (`background-color: var(--accent-gold)`, `font-weight: 600`, subtle gold glow shadow `0 4px 16px rgba(194, 155, 56, 0.25)` with `#FFFFFF` text and deeper shadow `0 6px 20px rgba(194, 155, 56, 0.4)` on hover).
+- **`src/app/globals.css`**: Introduced `.btn-hero-outline` glassmorphic button class (`rgba(251, 249, 245, 0.05)` backdrop blur with gold hover transition `rgba(194, 155, 56, 0.15)` and gold border glow).
+- **`src/components/Buttons.tsx` & `src/components/index.ts`**: Added `variant="gold"` support to `PrimaryButton` and exported a new `<GoldButton />` component wrapper.
+- **`src/app/page.tsx`**: Updated Home hero CTAs to feature the gold primary action button ("Explore Wellness") paired with the glassmorphic outline button ("Plan Your Stay").
+- **`src/app/wellness/page.tsx` & `src/app/blog/[slug]/page.tsx`**: Applied the new gold button styling to hero and end-of-article conversion CTAs.
+
+

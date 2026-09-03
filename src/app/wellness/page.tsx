@@ -65,7 +65,7 @@ export default function WellnessPage() {
             >
               Explore traditional wellness practices, nourishing food, and quiet spaces designed to help you reconnect with body and mind in the natural surroundings of Tiruvannamalai.
             </p>
-            <a href="#packages" className="btn btn-primary">
+            <a href="#packages" className="btn btn-gold">
               Explore Wellness Packages
             </a>
           </div>

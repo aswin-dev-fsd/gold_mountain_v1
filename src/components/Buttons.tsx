@@ -11,6 +11,7 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   target?: string;
   rel?: string;
+  variant?: 'primary' | 'gold';
 }
 
 export const PrimaryButton: React.FC<ButtonProps> = ({
@@ -22,8 +23,10 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
   type = 'button',
   target,
   rel,
+  variant = 'primary',
 }) => {
-  const combinedClasses = `btn btn-primary ${className}`.trim();
+  const baseClass = variant === 'gold' ? 'btn btn-gold' : 'btn btn-primary';
+  const combinedClasses = `${baseClass} ${className}`.trim();
 
   if (href) {
     return (
@@ -38,6 +41,10 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
       {children}
     </button>
   );
+};
+
+export const GoldButton: React.FC<ButtonProps> = (props) => {
+  return <PrimaryButton {...props} variant="gold" />;
 };
 
 export const SecondaryButton: React.FC<ButtonProps> = ({
