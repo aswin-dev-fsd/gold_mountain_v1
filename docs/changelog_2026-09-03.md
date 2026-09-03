@@ -32,3 +32,15 @@ This document details all structural modifications, component styling updates, r
 - **`src/components/Cards.tsx`**: Simplified `WellnessOfferingCard` bottom-right icon container by removing the faint background circle. Positioned gold icons neatly in the bottom right corner (`bottom: 2rem`, `right: 2rem`, `64px x 64px`).
 - **`src/app/page.tsx`**: Updated SVG icon viewBox rendering scale from `42px` to `64px` for high-dpi clarity and sharper visual impact.
 
+## 6. Centered Crest Card Design & Enquiry Form Alignment Polish
+- **`src/components/Cards.tsx` (`WellnessOfferingCard`)**: Redesigned category cards into a centered luxury crest aesthetic:
+  - Positioned 52px `--accent-gold` icons at the top-center of each card.
+  - Centered all text typography (`eyebrow`, `h3`, `p`) with uniform text alignment.
+  - Set `minHeight: 3.75rem` and `align-items: flex-start` on title elements to ensure perfect baseline alignment across card rows.
+- **`src/components/EnquiryForm.tsx` & `src/app/globals.css`**: Refactored enquiry form layout and input elements:
+  - Created `.enquiry-field-grid` with `align-items: end` to align all text inputs along the bottom baseline regardless of label length.
+  - Added `.enquiry-label`, `.enquiry-input`, and `.enquiry-textarea` classes with subtle gold focus rings (`rgba(194, 155, 56, 0.15)`).
+  - Styled input placeholders (`::placeholder`) with refined font size (`0.8125rem`), muted color (`#8C857B`), and subtle opacity (`0.55`).
+- **`src/app/globals.css`**: Adjusted `.plan-visit-grid` to `align-items: flex-start` to align the left editorial title block cleanly with the top edge of the enquiry form.
+
+

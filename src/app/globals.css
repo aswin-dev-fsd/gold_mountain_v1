@@ -378,7 +378,7 @@ header[data-scrolled="true"] .btn-nav:hover {
 .plan-visit-grid {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 3.5rem;
   width: 100%;
 }
@@ -386,6 +386,7 @@ header[data-scrolled="true"] .btn-nav:hover {
 .plan-visit-text-block {
   flex: 0 0 42%;
   max-width: 440px;
+  padding-top: 0.75rem;
 }
 
 .plan-visit-form-block {
@@ -402,6 +403,7 @@ header[data-scrolled="true"] .btn-nav:hover {
   .plan-visit-text-block {
     flex: none;
     max-width: 100%;
+    padding-top: 0;
   }
   .plan-visit-form-block {
     flex: none;
@@ -409,4 +411,71 @@ header[data-scrolled="true"] .btn-nav:hover {
   }
 }
 
+/* --------------------------------------------------------------------------
+   Enquiry Form Alignment & Input Placeholder Styling
+   -------------------------------------------------------------------------- */
+.enquiry-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: end;
+}
+
+@media (max-width: 600px) {
+  .enquiry-field-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+}
+
+.enquiry-field-grid > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.enquiry-label {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.enquiry-input,
+.enquiry-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-input:focus,
+.enquiry-textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(194, 155, 56, 0.15);
+}
+
+.enquiry-input::placeholder,
+.enquiry-textarea::placeholder {
+  font-size: 0.8125rem;
+  color: #8C857B;
+  opacity: 0.55;
+  font-weight: 400;
+}
 

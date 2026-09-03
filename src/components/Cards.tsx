@@ -114,48 +114,69 @@ export const WellnessOfferingCard: React.FC<WellnessOfferingProps> = ({
         borderRadius: '4px',
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
         height: '100%',
         position: 'relative',
-        overflow: 'hidden',
         transition: 'all 0.3s ease',
       }}
     >
-      {/* Bottom Right Icon Container (No background circle) */}
-      <div 
-        style={{
-          position: 'absolute',
-          bottom: '2rem',
-          right: '2rem',
-          width: '64px',
-          height: '64px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 1,
-        }}
-      >
-        {icon && (
-          <div style={{ color: 'var(--accent-gold)', width: '64px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {icon}
-          </div>
-        )}
-      </div>
-      
-      {/* Content wrapper to stay above the decorative circle */}
-      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-        <span 
-          className="eyebrow" 
-          style={{ 
-            marginBottom: '0.75rem',
-            color: 'var(--text-primary)'
+      {/* Centered Top Crest Icon (~52px) */}
+      {icon && (
+        <div
+          style={{
+            color: 'var(--accent-gold)',
+            width: '52px',
+            height: '52px',
+            marginBottom: '1.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {icon}
+        </div>
+      )}
+
+      {/* Card Content - Centered */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%' }}>
+        <span
+          className="eyebrow"
+          style={{
+            marginBottom: '0.65rem',
+            color: 'var(--accent-gold)',
+            fontSize: 'var(--fs-caption)',
+            letterSpacing: '0.14em',
+            textAlign: 'center',
+            lineHeight: 1.2,
           }}
         >
           {category}
         </span>
-        <h3 className="editorial-serif" style={{ fontSize: '1.45rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
+        <h3
+          className="editorial-serif"
+          style={{
+            fontSize: '1.45rem',
+            lineHeight: 1.25,
+            minHeight: '3.75rem',
+            marginBottom: '0.85rem',
+            color: 'var(--text-primary)',
+            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+          }}
+        >
           {title}
         </h3>
-        <p style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-small)', lineHeight: '1.7' }}>
+        <p
+          style={{
+            color: 'var(--text-muted)',
+            fontSize: 'var(--fs-small)',
+            lineHeight: '1.75',
+            textAlign: 'center',
+          }}
+        >
           {description}
         </p>
       </div>

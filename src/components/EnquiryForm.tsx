@@ -65,9 +65,9 @@ export const EnquiryForm: React.FC = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
+          <div className="enquiry-field-grid">
             <div>
-              <label htmlFor="name" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
+              <label htmlFor="name" className="enquiry-label">
                 Full Name *
               </label>
               <input
@@ -77,19 +77,12 @@ export const EnquiryForm: React.FC = () => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Your Name"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: '2px',
-                  backgroundColor: 'var(--bg-primary)',
-                  color: 'var(--text-primary)',
-                }}
+                className="enquiry-input"
               />
             </div>
 
             <div>
-              <label htmlFor="email" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
+              <label htmlFor="email" className="enquiry-label">
                 Email Address *
               </label>
               <input
@@ -99,22 +92,15 @@ export const EnquiryForm: React.FC = () => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="name@example.com"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: '2px',
-                  backgroundColor: 'var(--bg-primary)',
-                  color: 'var(--text-primary)',
-                }}
+                className="enquiry-input"
               />
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.25rem' }}>
+          <div className="enquiry-field-grid">
             <div>
-              <label htmlFor="phone" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
-                Phone / WhatsApp Number
+              <label htmlFor="phone" className="enquiry-label">
+                Phone / WhatsApp
               </label>
               <input
                 id="phone"
@@ -122,20 +108,13 @@ export const EnquiryForm: React.FC = () => {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="+91 98765 43210"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: '2px',
-                  backgroundColor: 'var(--bg-primary)',
-                  color: 'var(--text-primary)',
-                }}
+                className="enquiry-input"
               />
             </div>
 
             <div>
-              <label htmlFor="dates" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
-                Preferred Travel Dates / Duration
+              <label htmlFor="dates" className="enquiry-label">
+                Travel Dates / Duration
               </label>
               <input
                 id="dates"
@@ -143,20 +122,13 @@ export const EnquiryForm: React.FC = () => {
                 value={formData.dates}
                 onChange={(e) => setFormData({ ...formData, dates: e.target.value })}
                 placeholder="e.g. Nov 15-22 (7 nights)"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: '2px',
-                  backgroundColor: 'var(--bg-primary)',
-                  color: 'var(--text-primary)',
-                }}
+                className="enquiry-input"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" style={{ display: 'block', fontSize: 'var(--fs-caption)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
+            <label htmlFor="message" className="enquiry-label">
               Your Message or Specific Requirements
             </label>
             <textarea
@@ -165,15 +137,7 @@ export const EnquiryForm: React.FC = () => {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               placeholder="Tell us about your wellness preferences, stay expectations, or questions..."
-              style={{
-                width: '100%',
-                padding: '0.75rem 1rem',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: '2px',
-                backgroundColor: 'var(--bg-primary)',
-                color: 'var(--text-primary)',
-                resize: 'vertical',
-              }}
+              className="enquiry-textarea"
             />
           </div>
 
