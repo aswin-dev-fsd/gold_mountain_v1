@@ -412,8 +412,31 @@ header[data-scrolled="true"] .btn-nav:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Enquiry Form Alignment & Input Placeholder Styling
+   Enquiry Form Card, Alignment & Input Placeholder Styling
    -------------------------------------------------------------------------- */
+.enquiry-card {
+  background-color: var(--bg-surface);
+  padding: var(--space-xl);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .enquiry-card {
+    padding: 2.75rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .enquiry-card {
+    padding: 2.5rem 1.625rem;
+  }
+}
+
 .enquiry-field-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -451,17 +474,32 @@ header[data-scrolled="true"] .btn-nav:hover {
   text-overflow: ellipsis;
 }
 
+@media (max-width: 768px) {
+  .enquiry-label {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
 .enquiry-input,
 .enquiry-textarea {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid var(--border-subtle);
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-primary);
   font-size: 0.875rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .enquiry-input,
+  .enquiry-textarea {
+    font-size: 16px;
+  }
 }
 
 .enquiry-input:focus,

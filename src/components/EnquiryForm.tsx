@@ -23,18 +23,7 @@ export const EnquiryForm: React.FC = () => {
   const whatsappMessage = `Hello Gold Mountain Wellness Resort, I am ${formData.name || 'a visitor'}. I am interested in ${formData.wellnessGoal} around ${formData.dates || 'upcoming dates'}. Message: ${formData.message}`;
 
   return (
-    <div
-      id="enquire"
-      style={{
-        backgroundColor: 'var(--bg-surface)',
-        padding: 'var(--space-xl)',
-        borderRadius: '4px',
-        border: '1px solid var(--border-subtle)',
-        boxShadow: '0 16px 40px rgba(0, 0, 0, 0.15)',
-        maxWidth: '100%',
-        margin: '0',
-      }}
-    >
+    <div id="enquire" className="enquiry-card">
       <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
         <span className="eyebrow">Direct Booking & Enquiries</span>
         <h3 className="editorial-serif" style={{ fontSize: 'var(--fs-h3)', marginBottom: '0.5rem' }}>
@@ -51,7 +40,7 @@ export const EnquiryForm: React.FC = () => {
             textAlign: 'center',
             padding: '2rem',
             backgroundColor: 'var(--accent-gold-soft)',
-            borderRadius: '2px',
+            borderRadius: '8px',
           }}
           className="reveal-fade"
         >

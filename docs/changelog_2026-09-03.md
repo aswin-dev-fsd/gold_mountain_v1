@@ -1,46 +1,49 @@
-# Changelog: UI & Layout Enhancements (September 3, 2026)
+# Changelog: UI, Layout & Component Enhancements (September 3, 2026)
 
-This document details all structural modifications, component styling updates, responsive layout refactorings, and asset additions implemented across the project today.
+This document serves as the unified summary of all structural modifications, component styling updates, responsive layout refactorings, asset additions, and mobile UX optimizations implemented across the project today.
 
-## 1. Asset Additions & Iconography Updates
-- **`public/icons/`**: Created dedicated SVG icons for wellness category cards:
+---
+
+## 1. Custom Vector Iconography Integration
+- **`public/icons/`**: Created dedicated, scalable SVG vector icons for wellness category offerings:
   - `icon-ayurveda.svg` (Ayurvedic Healing & Consultation)
   - `icon-yoga.svg` (Yoga & Meditation Sanctuary)
   - `icon-dining.svg` (Mindful Sattvic Cuisine)
   - `icon-nature.svg` (Nature & Peaceful Surroundings)
-- **`src/app/page.tsx`**: Integrated the new custom vector icons into the `wellnessOfferings` dataset on the Home landing page.
+- **`src/app/page.tsx`**: Integrated custom vector SVGs into the `wellnessOfferings` dataset on the Home landing page.
 
-## 2. Card Design Refinements (`WellnessOfferingCard`)
-- **`src/components/Cards.tsx`**: Overhauled `WellnessOfferingCard` layout and visual hierarchy:
-  - Extended card height to `minHeight: 380px` and adjusted padding to `3rem 2.25rem` for generous spacing and consistent alignment.
-  - Relocated the section icon into the semi-transparent overlapping background circle in the bottom-right corner (`bottom: -30px`, `right: -30px`, `width: 160px`, `height: 160px`).
-  - Rendered icons in `--accent-gold` with a `38px` footprint inside the decorative circle, producing a subtle, high-end luxury resort aesthetic.
+---
 
-## 3. "Plan Your Visit" Side-by-Side Section Redesign
-- **`src/app/page.tsx`**: Transformed Section 10 ("Plan Your Visit") from a centered single-column layout into a modern 2-column side-by-side layout (`.plan-visit-grid`).
-- **`src/app/globals.css`**: Defined CSS classes for the 2-column grid:
-  - `.plan-visit-text-block` (`flex: 0 0 42%`): Displays section eyebrow, editorial heading, and description with clean line height and left alignment.
-  - `.plan-visit-form-block` (`flex: 1 1 54%`): Embeds the enquiry form in a dedicated side panel.
-  - Added responsive `@media (max-width: 768px)` breakdown to stack text above the form seamlessly on mobile viewports.
+## 2. `WellnessOfferingCard` Luxury Crest Redesign
+- **`src/components/Cards.tsx`**: Overhauled category cards into a centered luxury crest design:
+  - Positioned 52px `--accent-gold` SVG icons at the top-center of each card with generous spacing (`margin-bottom: 1.5rem`).
+  - Centered eyebrow, title, and description text for uniform aesthetic balance.
+  - Set `minHeight: 3.75rem` and `align-items: flex-start` on title elements to guarantee consistent multi-line title heights and baseline alignment across grid rows.
+  - Simplified card backdrop by removing background overlap circles for a clean, premium visual footprint.
 
-## 4. Enquiry Form Container Refinements
-- **`src/components/EnquiryForm.tsx`**: Refactored the form wrapper styling to support side-by-side section placement:
-  - Removed fixed `maxWidth: '720px'` constraint in favor of `maxWidth: '100%'` and `margin: '0'`.
-  - Added elevated depth with `box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15)` and updated `border-radius` to `4px`.
+---
 
-## 5. Card Iconography & Layout Polish (`WellnessOfferingCard`)
-- **`src/components/Cards.tsx`**: Simplified `WellnessOfferingCard` bottom-right icon container by removing the faint background circle. Positioned gold icons neatly in the bottom right corner (`bottom: 2rem`, `right: 2rem`, `64px x 64px`).
-- **`src/app/page.tsx`**: Updated SVG icon viewBox rendering scale from `42px` to `64px` for high-dpi clarity and sharper visual impact.
+## 3. "Plan Your Visit" 2-Column Layout Redesign
+- **`src/app/page.tsx`**: Transformed Section 10 ("Plan Your Visit") from a centered single-column block into a modern 2-column side-by-side grid (`.plan-visit-grid`).
+- **`src/app/globals.css`**: Configured responsive flexbox grid classes:
+  - `.plan-visit-text-block` (`flex: 0 0 42%`, `max-width: 440px`): Displays eyebrow, editorial serif heading, and descriptive copy with clean left alignment.
+  - `.plan-visit-form-block` (`flex: 1 1 54%`, `max-width: 680px`): Embeds the enquiry form in a dedicated, elevated side panel.
+  - Configured `align-items: flex-start` on `.plan-visit-grid` so the left heading aligns with the top edge of the form container.
+  - Added responsive `@media (max-width: 768px)` rules to collapse the 2-column grid into a single stacked column on tablet/mobile screens.
 
-## 6. Centered Crest Card Design & Enquiry Form Alignment Polish
-- **`src/components/Cards.tsx` (`WellnessOfferingCard`)**: Redesigned category cards into a centered luxury crest aesthetic:
-  - Positioned 52px `--accent-gold` icons at the top-center of each card.
-  - Centered all text typography (`eyebrow`, `h3`, `p`) with uniform text alignment.
-  - Set `minHeight: 3.75rem` and `align-items: flex-start` on title elements to ensure perfect baseline alignment across card rows.
-- **`src/components/EnquiryForm.tsx` & `src/app/globals.css`**: Refactored enquiry form layout and input elements:
-  - Created `.enquiry-field-grid` with `align-items: end` to align all text inputs along the bottom baseline regardless of label length.
-  - Added `.enquiry-label`, `.enquiry-input`, and `.enquiry-textarea` classes with subtle gold focus rings (`rgba(194, 155, 56, 0.15)`).
-  - Styled input placeholders (`::placeholder`) with refined font size (`0.8125rem`), muted color (`#8C857B`), and subtle opacity (`0.55`).
-- **`src/app/globals.css`**: Adjusted `.plan-visit-grid` to `align-items: flex-start` to align the left editorial title block cleanly with the top edge of the enquiry form.
+---
 
+## 4. Enquiry Form Component & Mobile UX Polish
+- **`src/components/EnquiryForm.tsx` & `src/app/globals.css`**: Complete refactoring of form architecture and responsive styling:
+  - Created `.enquiry-card` with `border-radius: 12px`, `box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15)`, and responsive padding (`2.75rem 2rem` under 768px, `2.5rem 1.625rem` under 480px).
+  - Created `.enquiry-field-grid` with `align-items: end` and `justify-content: flex-end` so inputs remain perfectly aligned along the bottom baseline regardless of label line count.
+  - Created `.enquiry-input` and `.enquiry-textarea` classes with `border-radius: 4px`, subtle gold focus rings (`rgba(194, 155, 56, 0.15)`), and `font-size: 16px` on mobile (`max-width: 768px`) to prevent iOS Safari auto-zooming on focus.
+  - Styled input placeholders (`::placeholder`) with `font-size: 0.8125rem`, muted color `#8C857B`, and `0.55` opacity.
+  - Softened `.enquiry-label` CSS rules on mobile to allow multi-line labels to wrap naturally without truncation.
 
+---
+
+## 5. Documentation Updates & Asset Cleanup
+- **`docs/progress_and_completed_works.md`**: Updated development progress report through September 3, 2026.
+- **`docs/ui_ux_audit_and_recommendations.md`**: Added Implementation Status Tracker detailing completed UI/UX audit items.
+- **`public/fonts/the-seasons/`**: Removed legacy `.otf` font files following the successful migration to `Playfair Display` via Next.js Google Fonts.
