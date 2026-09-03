@@ -2,7 +2,20 @@
 
 **Project:** Gold Mountain Wellness Resort Website
 **Scope:** Full site review — typography, color, spacing, navigation, and structural/content consistency across all pages and shared components.
-**Status:** Open — pending prioritization and implementation.
+**Status:** In Progress — major audit items implemented & tracked.
+
+---
+
+## Completed Audit Items (September 2026 Updates)
+
+- **Typography & Font Weight Synthesis:** Migrated from local `The Seasons` font to `Playfair Display` via Next.js Google Fonts. Fixed artificial synthetic bolding by standardizing font weights (`400`/`500`/`600`).
+- **Real Resort Photography:** Replaced all dummy placeholder images with high-resolution, WebP-optimized resort photography (`resort_aerial_golden_hour_view.webp`, `resort_building_exterior_front.webp`, `meditation_buddha_sanctuary.webp`, `mindful_dining_sattvic_breakfast.webp`).
+- **Custom Vector Icons:** Replaced hardcoded default icons with clean SVG icons (`public/icons/`).
+- **Card Design System:** Redesigned `WellnessOfferingCard` with elevated shadow, white background, and embedded gold background icons.
+- **Section 10 "Plan Your Visit" Redesign:** Transformed single-column centered block into a responsive 2-column side-by-side grid with dedicated text and form blocks.
+- **Header & Navigation:** Implemented state-aware glassmorphic transition on scroll, fixed header height (`4.25rem`), and fixed breadcrumb padding to eliminate content overlap.
+- **Mobile Drawer Polish:** Added `overflow: hidden` on document body when mobile menu is open to prevent background scrolling.
+- **PinnedTestimonials Carousel:** Added desktop pinned scroll animation + mobile touch snap-scroll across 6 core pages.
 
 ---
 
