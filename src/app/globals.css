@@ -215,13 +215,13 @@ button, input, textarea, select {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.85rem 2.5rem;
+  padding: 0.65rem 2rem;
   font-family: var(--font-primary);
   font-size: var(--fs-small);
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   transition: var(--transition-smooth);
   border: 1px solid transparent;
@@ -259,6 +259,7 @@ header[data-scrolled="true"] .btn-nav:hover {
   background-color: var(--bg-dark);
   color: var(--text-light);
   border-color: var(--bg-dark);
+  font-weight: 400;
 }
 
 .btn-primary:hover {
@@ -271,7 +272,7 @@ header[data-scrolled="true"] .btn-nav:hover {
   background-color: var(--accent-gold);
   color: var(--bg-dark);
   border-color: var(--accent-gold);
-  font-weight: 600;
+  font-weight: 400;
   box-shadow: 0 4px 16px rgba(194, 155, 56, 0.25);
   transition: all 0.35s ease;
 }
@@ -300,13 +301,17 @@ header[data-scrolled="true"] .btn-nav:hover {
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--text-primary);
-  border-color: var(--border-subtle);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  transition: all 0.25s ease;
 }
 
 .btn-secondary:hover {
+  background-color: var(--accent-gold);
+  color: var(--bg-dark);
   border-color: var(--accent-gold);
-  color: var(--accent-gold);
+  box-shadow: none;
+  transform: none;
 }
 
 .btn-whatsapp {
@@ -395,12 +400,22 @@ header[data-scrolled="true"] .btn-nav:hover {
 /* --------------------------------------------------------------------------
    Experience Card Hover Scale Effect
    -------------------------------------------------------------------------- */
+.experience-card {
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.experience-card:hover {
+  transform: translateY(-4px) scale(1.025);
+  box-shadow: 0 16px 36px rgba(20, 36, 25, 0.22);
+  z-index: 2;
+}
+
 .experience-card .experience-img {
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .experience-card:hover .experience-img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* --------------------------------------------------------------------------

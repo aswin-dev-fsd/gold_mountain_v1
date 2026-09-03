@@ -63,4 +63,9 @@ This document serves as the unified summary of all structural modifications, com
 - **`src/app/page.tsx`**: Updated Home hero CTAs to feature the gold primary action button ("Explore Wellness") paired with the glassmorphic outline button ("Plan Your Stay").
 - **`src/app/wellness/page.tsx` & `src/app/blog/[slug]/page.tsx`**: Applied the new gold button styling to hero and end-of-article conversion CTAs.
 
-
+## 8. CSS Refinements & Hover Polish
+- **`src/app/globals.css`**: Refined primary and secondary button hover states for a flatter, more elegant luxury feel:
+  - `.btn-nav`: Reduced padding slightly to `0.65rem 2rem`, set `font-weight: 400`, increased `letter-spacing: 0.12em`, and reduced `border-radius: 4px` for sharper aesthetics.
+  - `.btn-primary` and `.btn-nav` hover states updated to use `font-weight: 400` consistently.
+  - `.btn-secondary`: Restyled to use `--accent-gold` for text and borders by default. Hover state modified to solid gold background with dark text, removing drop shadows and transforms for a flat, premium matte effect.
+  - `.experience-card`: Enhanced hover interaction by applying a smooth lift (`transform: translateY(-4px) scale(1.025)`) and a deep, soft shadow (`0 16px 36px rgba(20, 36, 25, 0.22)`) while slightly tweaking the inner image scale to `1.06`.
