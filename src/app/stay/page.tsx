@@ -189,21 +189,25 @@ export default function StayPage() {
       {/* --------------------------------------------------------------------------
          FINAL CTA & ENQUIRY
          -------------------------------------------------------------------------- */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)' }}>
+      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)', padding: 'var(--space-2xl) 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-xl)', maxWidth: '720px', margin: '0 auto 3rem auto' }}>
-            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-              Direct Enquiries
-            </span>
-            <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h1)', color: 'var(--text-light)', marginBottom: '1rem' }}>
-              Plan your stay at Gold Mountain.
-            </h2>
-            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)' }}>
-              Contact us on WhatsApp or submit an enquiry to receive current availability and room details.
-            </p>
-          </div>
+          <div className="plan-visit-grid">
+            <div className="plan-visit-text-block">
+              <span className="eyebrow" style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>
+                Direct Enquiries
+              </span>
+              <h2 className="editorial-serif" style={{ fontSize: 'clamp(2.25rem, 3.5vw, 3.25rem)', color: 'var(--text-light)', lineHeight: 1.15, marginBottom: '1.5rem', maxWidth: '420px' }}>
+                Plan your stay at Gold Mountain.
+              </h2>
+              <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.6, maxWidth: '420px' }}>
+                Contact us on WhatsApp or submit an enquiry to receive current availability and room details.
+              </p>
+            </div>
 
-          <EnquiryForm />
+            <div className="plan-visit-form-block">
+              <EnquiryForm />
+            </div>
+          </div>
         </div>
       </section>
 

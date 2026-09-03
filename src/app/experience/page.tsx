@@ -6,7 +6,6 @@ import {
   SectionHeading,
   EditorialSection,
   ExperienceBlock,
-  PrimaryButton,
   EnquiryForm,
 } from '@/components';
 
@@ -180,22 +179,25 @@ export default function ExperiencePage() {
       {/* --------------------------------------------------------------------------
          FINAL CTA & ENQUIRY
          -------------------------------------------------------------------------- */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)' }}>
+      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)', padding: 'var(--space-2xl) 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-xl)', maxWidth: '720px', margin: '0 auto 3rem auto' }}>
-            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-              Discovery
-            </span>
-            <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h1)', color: 'var(--text-light)', marginBottom: '1rem' }}>
-              There is more to discover here.
-            </h2>
-            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', marginBottom: '2rem' }}>
-              Plan your visit to Gold Mountain and experience our sanctuary firsthand.
-            </p>
-            <PrimaryButton href="/stay">Plan Your Stay</PrimaryButton>
-          </div>
+          <div className="plan-visit-grid">
+            <div className="plan-visit-text-block">
+              <span className="eyebrow" style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>
+                Discovery
+              </span>
+              <h2 className="editorial-serif" style={{ fontSize: 'clamp(2.25rem, 3.5vw, 3.25rem)', color: 'var(--text-light)', lineHeight: 1.15, marginBottom: '1.5rem', maxWidth: '420px' }}>
+                There is more to discover here.
+              </h2>
+              <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.6, maxWidth: '420px' }}>
+                Plan your visit to Gold Mountain and experience our sanctuary firsthand.
+              </p>
+            </div>
 
-          <EnquiryForm />
+            <div className="plan-visit-form-block">
+              <EnquiryForm />
+            </div>
+          </div>
         </div>
       </section>
 

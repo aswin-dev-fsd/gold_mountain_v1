@@ -8,7 +8,6 @@ import {
   EditorialSection,
   WellnessOfferingCard,
   PackageCard,
-  WhatsAppCTA,
   EnquiryForm,
 } from '@/components';
 
@@ -254,24 +253,25 @@ export default function WellnessPage() {
       {/* --------------------------------------------------------------------------
          SECTION 07 — FINAL CTA
          -------------------------------------------------------------------------- */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)' }}>
+      <section className="section" style={{ backgroundColor: 'var(--bg-dark)', color: 'var(--text-light)', padding: 'var(--space-2xl) 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-xl)', maxWidth: '720px', margin: '0 auto 3rem auto' }}>
-            <span className="eyebrow" style={{ color: 'var(--accent-gold)' }}>
-              Enquire Today
-            </span>
-            <h2 className="editorial-serif" style={{ fontSize: 'var(--fs-h1)', color: 'var(--text-light)', marginBottom: '1rem' }}>
-              Find the kind of wellness that suits your stay.
-            </h2>
-            <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', marginBottom: '2rem' }}>
-              Speak with our team on WhatsApp or send us an email to receive package details and availability.
-            </p>
-            <WhatsAppCTA message="Hello, I would like to enquire about Gold Mountain wellness packages.">
-              Enquire on WhatsApp
-            </WhatsAppCTA>
-          </div>
+          <div className="plan-visit-grid">
+            <div className="plan-visit-text-block">
+              <span className="eyebrow" style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>
+                Enquire Today
+              </span>
+              <h2 className="editorial-serif" style={{ fontSize: 'clamp(2.25rem, 3.5vw, 3.25rem)', color: 'var(--text-light)', lineHeight: 1.15, marginBottom: '1.5rem', maxWidth: '420px' }}>
+                Find the kind of wellness that suits your stay.
+              </h2>
+              <p style={{ color: 'var(--text-light-muted)', fontSize: 'var(--fs-body-lg)', lineHeight: 1.6, maxWidth: '420px' }}>
+                Speak with our team on WhatsApp or send us an email to receive package details and availability.
+              </p>
+            </div>
 
-          <EnquiryForm />
+            <div className="plan-visit-form-block">
+              <EnquiryForm />
+            </div>
+          </div>
         </div>
       </section>
 

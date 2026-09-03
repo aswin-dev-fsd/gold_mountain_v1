@@ -47,3 +47,12 @@ This document serves as the unified summary of all structural modifications, com
 - **`docs/progress_and_completed_works.md`**: Updated development progress report through September 3, 2026.
 - **`docs/ui_ux_audit_and_recommendations.md`**: Added Implementation Status Tracker detailing completed UI/UX audit items.
 - **`public/fonts/the-seasons/`**: Removed legacy `.otf` font files following the successful migration to `Playfair Display` via Next.js Google Fonts.
+
+## 6. Site-Wide 2-Column "Plan Your Visit" & Final CTA Standardization
+- **Subpage Rollout**: Standardized the 2-column side-by-side Final CTA & Enquiry layout (`.plan-visit-grid`) across all remaining core pages, replacing old centered single-column blocks:
+  - `src/app/about/page.tsx` ("Our Sanctuary")
+  - `src/app/experience/page.tsx` ("Discovery")
+  - `src/app/stay/page.tsx` ("Direct Enquiries")
+  - `src/app/wellness/page.tsx` ("Enquire Today")
+- **Layout Consistency**: Unified section padding (`padding: var(--space-2xl) 0`), text block flex proportions (`.plan-visit-text-block`), and responsive mobile collapse behavior across the entire site.
+
