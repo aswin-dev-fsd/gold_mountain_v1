@@ -109,7 +109,8 @@ export const WellnessOfferingCard: React.FC<WellnessOfferingProps> = ({
         backgroundColor: '#FFFFFF',
         border: '1px solid rgba(0, 0, 0, 0.08)',
         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
-        padding: '2rem',
+        padding: '3rem 2.25rem',
+        minHeight: '380px',
         borderRadius: '4px',
         display: 'flex',
         flexDirection: 'column',
@@ -119,23 +120,33 @@ export const WellnessOfferingCard: React.FC<WellnessOfferingProps> = ({
         transition: 'all 0.3s ease',
       }}
     >
-      {/* Decorative Overlapping Circle */}
+      {/* Decorative Overlapping Circle & Icon Container */}
       <div 
         style={{
           position: 'absolute',
-          bottom: '-40px',
-          right: '-40px',
+          bottom: '-30px',
+          right: '-30px',
           width: '160px',
           height: '160px',
           borderRadius: '50%',
-          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          backgroundColor: 'rgba(0, 0, 0, 0.03)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingBottom: '25px',
+          paddingRight: '25px',
           zIndex: 0,
         }}
-      />
+      >
+        {icon && (
+          <div style={{ color: 'var(--accent-gold)', width: '38px', height: '38px' }}>
+            {icon}
+          </div>
+        )}
+      </div>
       
       {/* Content wrapper to stay above the decorative circle */}
       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
-        {icon && <div style={{ color: 'var(--text-primary)', marginBottom: '1rem' }}>{icon}</div>}
         <span 
           className="eyebrow" 
           style={{ 

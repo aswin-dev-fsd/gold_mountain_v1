@@ -28,10 +28,11 @@ export const EnquiryForm: React.FC = () => {
       style={{
         backgroundColor: 'var(--bg-surface)',
         padding: 'var(--space-xl)',
-        borderRadius: '2px',
+        borderRadius: '4px',
         border: '1px solid var(--border-subtle)',
-        maxWidth: '720px',
-        margin: '0 auto',
+        boxShadow: '0 16px 40px rgba(0, 0, 0, 0.15)',
+        maxWidth: '100%',
+        margin: '0',
       }}
     >
       <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>

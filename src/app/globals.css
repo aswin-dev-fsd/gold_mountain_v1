@@ -372,3 +372,41 @@ header[data-scrolled="true"] .btn-nav:hover {
   transform: scale(1.05);
 }
 
+/* --------------------------------------------------------------------------
+   Plan Your Visit 2-Column Side-by-Side Responsive Layout
+   -------------------------------------------------------------------------- */
+.plan-visit-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+  width: 100%;
+}
+
+.plan-visit-text-block {
+  flex: 0 0 42%;
+  max-width: 440px;
+}
+
+.plan-visit-form-block {
+  flex: 1 1 54%;
+  max-width: 680px;
+}
+
+@media (max-width: 768px) {
+  .plan-visit-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2.5rem;
+  }
+  .plan-visit-text-block {
+    flex: none;
+    max-width: 100%;
+  }
+  .plan-visit-form-block {
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+
